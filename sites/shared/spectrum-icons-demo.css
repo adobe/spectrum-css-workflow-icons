@@ -1,0 +1,37 @@
+.icons-container {
+  width: fit-content;
+  margin: 0 auto 4rem auto;
+  display: block;
+}
+
+.icons-table {
+  width: auto;
+}
+
+.markup-example {
+  opacity: 0.1;
+  position: absolute;
+  top: -999px;
+  left: -999px;
+}
+
+.spectrum-Table-row:hover {
+  background-color: initial !important;
+  cursor: default;
+}
+
+.spectrum-Icon {
+  transition: color 0.25s ease-in-out;
+  pointer-events: auto !important;
+}
+.spectrum-Icon:hover {
+  color: rgb(13, 102, 208);
+  cursor: pointer;
+}
+
+.notification-toast {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
