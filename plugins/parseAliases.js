@@ -1,11 +1,10 @@
-var through = require('through2');
-var gutil = require('gulp-util');
-var path = require('path');
-var File = gutil.File;
-var PluginError = gutil.PluginError;
+const through = require('through2');
+const path = require('path');
+const File = require('vinyl');
+const PluginError = require('plugin-error');
 
-module.exports = function(filename) {
-  var aliases = {};
+module.exports = function (filename) {
+  const aliases = {};
 
   function bufferAliases(file, encoding, callback) {
     // Ignore empty files
@@ -14,17 +13,17 @@ module.exports = function(filename) {
       return;
     }
 
+    let metadata;
     // Resolve the colors in the color stop
     try {
-      var metadata = JSON.parse(String(file.contents));
-    }
-    catch (err) {
-      this.emit('error', new PluginError('parseAliases', 'Failed to parse metadata for '+path.basename(file.path)+': '+err.message));
+      metadata = JSON.parse(String(file.contents));
+    } catch (err) {
+      this.emit('error', new PluginError('parseAliases', 'Failed to parse metadata for ' + path.basename(file.path) + ': ' + err.message));
     }
 
-    var name = metadata['athena:title'];
+    const name = metadata['athena:title'];
     if (metadata['athena:alias']) {
-      var iconAliases = metadata['athena:alias'];
+      const iconAliases = metadata['athena:alias'];
       if (typeof iconAliases === 'string') {
         aliases[name] = [iconAliases];
       }
@@ -35,7 +34,7 @@ module.exports = function(filename) {
   }
 
   function endStream(callback) {
-    var file = new File();
+    const file = new File();
     file.contents = new Buffer(JSON.stringify(aliases));
     file.path = filename;
 

@@ -1,9 +1,25 @@
-var gulp = require('gulp');
+const {task, series, parallel} = require('gulp');
+const del = require('del');
 
 require('./tasks/icons');
 require('./tasks/release');
-require('./tasks/react');
+require('./tasks/site');
 
-gulp.task('build', gulp.series('icons', 'react'));
+task('clean', () =>
+  del('dist')
+);
 
-gulp.task('default', gulp.series('build'));
+task('build', series(
+  'clean',
+  parallel(
+    'copy-svg-files',
+    'copy-sites-files',
+    'copy-loadIcons',
+    'copy-spectrum-css'
+  ),
+  'build-svg-css',
+  'generate-svg-examples'
+));
+
+task('default', series('build'));
+
