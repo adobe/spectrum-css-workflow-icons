@@ -1,19 +1,15 @@
 {
-  "name": "spectrum-css-workflow-icons",
-  "version": "1.0.0-alpha.1",
-  "description": "The svg icon package for workflow icon",
+  "name": "@adobe/spectrum-css-workflow-icons",
+  "version": "1.0.0",
   "main": "dist/icons.json",
   "scripts": {
     "build": "gulp",
     "build-icons": "gulp icons",
     "clean": "gulp clean"
   },
-  "keywords": [
-    "Spectrum-CSS"
-  ],
-  "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/spectrum-css": "^2.13.0",
     "del": "^5.0.0",
     "glob": "^7.1.4",
     "gulp": "^4.0.2",
@@ -28,14 +24,13 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-template": "^5.0.0",
     "inquirer": "^1.2.2",
+    "loadicons": "^1.0.0",
     "merge-stream": "^2.0.0",
     "plugin-error": "^1.0.1",
     "semver": "^6.3.0",
     "through2": "^3.0.1",
     "vinyl": "^2.2.0",
-    "xtend": "^4.0.2",
-    "@adobe/spectrum-css": "^2.13.0",
-    "loadicons": "^1.0.0"
+    "xtend": "^4.0.2"
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-release": "^2.1.0",
