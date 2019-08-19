@@ -7,6 +7,9 @@
     "build-icons": "gulp icons",
     "clean": "gulp clean"
   },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
+  },
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/spectrum-css": "^2.13.0",

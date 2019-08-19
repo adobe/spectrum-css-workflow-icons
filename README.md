@@ -2,10 +2,11 @@
 
 Build and explore spectrum-css workflow icons
 
-## Setup
+### Setup
 
 ```
 npm install
+npm install -g http-server
 ```
 
 ### For external user
@@ -22,4 +23,10 @@ Run `http-server dist/ -o` to see the mini site for workflow icons
 4. Run `npm run build` to generate the ready to publish package in dist/
 5. Preview the icons with `http-server dist/ -o`
 
+### Contributing
 
+Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING.md) for more information.
+
+### Licensing
+
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
