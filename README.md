@@ -18,8 +18,8 @@ Run `http-server dist/ -o` to see the mini-site for all the workflow icons.
 
 1. Make sure connect to corp network.
 2. Run `npm install @a4u/a4u-collection-react-spectrum-open-source-release` and `npm install @a4u/a4u-collection-spectrum-css-release` to update the icon set from A4U system.
-3. Run `npm run build-icons` to rebuild the icons/ folder.
-4. Run `npm run build` to generate the ready to publish package in dist/
+3. Run `npm run build-icons` to rebuild the `icons/` folder.
+4. Run `npm run build` to generate the ready to publish package in `dist/`
 5. Preview the icons with `http-server dist/ -o`
 
 
