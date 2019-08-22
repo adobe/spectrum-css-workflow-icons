@@ -36,7 +36,8 @@ task('copy-loadIcons', () =>
 
 task('copy-spectrum-css', () =>
   src([
-    'node_modules/@adobe/spectrum-css/dist/*.css'
+    'node_modules/@adobe/spectrum-css/dist/*.css',
+    'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'
   ])
     .pipe(dest('dist/sites/spectrum-css/'))
 );
@@ -50,7 +51,7 @@ task('build-svg-css', () =>
 task('generate-svg-examples', () =>
   src('sites/svg/*.html')
     .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-workflow-icons.svg', 'utf8'),
+      svgsprite: fs.readFileSync('dist/spectrum-icons.svg', 'utf8'),
       icons: JSON.parse(fs.readFileSync('dist/icons.json', 'utf8'))
     }))
     .pipe(dest('dist/'))

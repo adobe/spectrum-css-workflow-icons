@@ -122,7 +122,7 @@ task('replace-iconlist', () =>
 task('generate-svgsprite', () =>
   generateSVGSprite([
     'icons/workflow/**/*.svg'
-  ], 'spectrum-workflow-icons.svg')
+  ], 'spectrum-icons.svg')
 );
 
 task('workflow-icons-monochrome', series(
