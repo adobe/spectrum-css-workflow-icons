@@ -29,7 +29,8 @@ task('build', series(
     'copy-spectrum-css'
   ),
   'build-svg-css',
-  'generate-svg-examples'
+  'generate-svg-examples',
+  'generate-svg-color-examples'
 ));
 
 task('default', series('build'));

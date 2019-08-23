@@ -56,6 +56,38 @@ task('clean-icons', () =>
     .pipe(dest('icons/workflow/'))
 );
 
+task('clean-icons-color', () =>
+  src([
+    'node_modules/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release/assets/24/*.svg'
+  ])
+    .pipe(svgmin({
+      plugins: [
+        {removeViewBox: false}
+      ]
+    }))
+    // .pipe(replace(/<style>[\s\S]*?<\/style>/m, ''))
+    .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
+    .pipe(svgmin({
+      plugins: [
+        {
+          removeAttrs: {
+            attrs: [
+              'data-name'
+              // 'class',
+              // 'id'
+            ]
+          }
+        },
+        {collapseGroups: true},
+        {removeViewBox: false}
+      ]
+    }))
+    .pipe(rename((filePath) => {
+      filePath.basename = filePath.basename.replace(/(.*?)\d+/, '$1');
+    }))
+    .pipe(dest('icons/workflow/color/24/'))
+);
+
 task('generate-opensource-iconlist',
   () => src('node_modules/@a4u/a4u-collection-react-spectrum-open-source-release/**/*.svg')
     .pipe(rename(function (filePath) {
@@ -75,6 +107,12 @@ task('generate-iconlist-24', () =>
   src('icons/workflow/24/*.svg')
     .pipe(iconList('icons_24.json'))
     .pipe(dest('temp/'))
+);
+
+task('generate-iconlist-color', () =>
+  src('icons/workflow/color/24/*.svg')
+    .pipe(iconList('icons-color.json'))
+    .pipe(dest('icons/workflow/'))
 );
 
 // Ensure that the required sizes are provided for all icons -- excludes color since there's only one size
@@ -121,9 +159,20 @@ task('replace-iconlist', () =>
 
 task('generate-svgsprite', () =>
   generateSVGSprite([
-    'icons/workflow/**/*.svg'
+    'icons/workflow/**/*.svg',
+    '!icons/workflow/color/**/*'
   ], 'spectrum-icons.svg')
 );
+
+task('generate-svgsprite-color', () =>
+  generateSVGSprite('icons/workflow/color/**/*.svg', 'spectrum-icons-color.svg')
+);
+
+task('workflow-icons-color', series(
+  'clean-icons-color',
+  'generate-iconlist-color',
+  'generate-svgsprite-color'
+));
 
 task('workflow-icons-monochrome', series(
   'clean-icons',
@@ -138,7 +187,12 @@ task('workflow-icons-monochrome', series(
   'generate-svgsprite'
 ));
 
+task('workflow-icons', parallel(
+  'workflow-icons-monochrome',
+  'workflow-icons-color'
+));
+
 task('icons', series(
   'delete-icons',
-  'workflow-icons-monochrome'
+  'workflow-icons'
 ));

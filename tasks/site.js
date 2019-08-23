@@ -49,10 +49,19 @@ task('build-svg-css', () =>
 );
 
 task('generate-svg-examples', () =>
-  src('sites/svg/*.html')
+  src('sites/svg/index.html')
     .pipe(template({
       svgsprite: fs.readFileSync('dist/spectrum-icons.svg', 'utf8'),
       icons: JSON.parse(fs.readFileSync('dist/icons.json', 'utf8'))
+    }))
+    .pipe(dest('dist/'))
+);
+
+task('generate-svg-color-examples', () =>
+  src('sites/svg/color.html')
+    .pipe(template({
+      svgsprite: fs.readFileSync('dist/spectrum-icons-color.svg', 'utf8'),
+      icons: JSON.parse(fs.readFileSync('dist/icons-color.json', 'utf8'))
     }))
     .pipe(dest('dist/'))
 );
