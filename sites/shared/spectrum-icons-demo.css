@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 .icons-container {
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto 4rem auto;
   display: block;
 }
