@@ -42,7 +42,8 @@ task('clean-icons', () =>
             attrs: [
               'class',
               'data-name',
-              'id'
+              'id',
+              '*:fill:((?!^none$).)*'
             ]
           }
         },
@@ -72,7 +73,8 @@ task('clean-icons-color', () =>
         {
           removeAttrs: {
             attrs: [
-              'data-name'
+              'data-name',
+              '*:fill:((?!^none$).)*'
               // 'class',
               // 'id'
             ]
