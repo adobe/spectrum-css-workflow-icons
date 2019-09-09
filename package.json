@@ -1,6 +1,6 @@
 {
   "name": "@adobe/spectrum-css-workflow-icons",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "main": "dist/icons.json",
   "scripts": {
     "build": "gulp",
@@ -37,7 +37,7 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "^2.0.0",
-    "@a4u/a4u-collection-react-spectrum-open-source-release": "^3.0.0",
-    "@a4u/a4u-collection-spectrum-css-release": "^2.1.0"
+    "@a4u/a4u-collection-react-spectrum-open-source-release": "^3.1.0",
+    "@a4u/a4u-collection-spectrum-css-release": "^2.3.0"
   }
 }
