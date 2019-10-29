@@ -6,6 +6,7 @@
 /temp
 /gulpfile.js
 /package-lock.json
+/package.json.bak
 /icons
 npm-debug.log
 /.idea

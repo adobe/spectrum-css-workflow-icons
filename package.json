@@ -5,7 +5,9 @@
   "scripts": {
     "build": "gulp",
     "build-icons": "gulp icons",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "prepublish": "mv package.json package.json.bak && mv package-publish.json package.json",
+    "postpublish": "mv package.json package-publish.json && mv package.json.bak package.json"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
