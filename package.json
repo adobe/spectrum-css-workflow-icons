@@ -6,7 +6,7 @@
     "build": "gulp",
     "build-icons": "gulp icons",
     "clean": "gulp clean",
-    "prepublish": "mv package.json package.json.bak && mv package-publish.json package.json",
+    "prepublishOnly": "mv package.json package.json.bak && mv package-publish.json package.json",
     "postpublish": "mv package.json package-publish.json && mv package.json.bak package.json"
   },
   "bugs": {
@@ -39,7 +39,7 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "^2.0.0",
-    "@a4u/a4u-collection-react-spectrum-open-source-release": "^3.1.0",
-    "@a4u/a4u-collection-spectrum-css-release": "^2.3.0"
+    "@a4u/a4u-collection-react-spectrum-open-source-release": "^4.0.0",
+    "@a4u/a4u-collection-spectrum-css-release": "^3.6.0"
   }
 }
