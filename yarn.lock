@@ -7,15 +7,15 @@
   resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release/-/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release-2.0.0.tgz#92fe08ed97d87ccec5ab15ca21da8e8eaaa589fa"
   integrity sha1-kv4I7ZfYfM7FqxXKIdqOjqqlifo=
 
-"@a4u/a4u-collection-react-spectrum-open-source-release@^4.0.0":
-  version "4.0.0"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-react-spectrum-open-source-release/-/@a4u/a4u-collection-react-spectrum-open-source-release-4.0.0.tgz#23ba8ee84b112ba97dae61338911b4a65f8fca35"
-  integrity sha1-I7qO6EsRK6l9rmEziRG0pl+PyjU=
+"@a4u/a4u-collection-react-spectrum-open-source-release@^4.1.0":
+  version "4.1.0"
+  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-react-spectrum-open-source-release/-/@a4u/a4u-collection-react-spectrum-open-source-release-4.1.0.tgz#adc6d600b51c33e07f3c1c63b7d1014115908121"
+  integrity sha1-rcbWALUcM+B/PBxjt9EBQRWQgSE=
 
-"@a4u/a4u-collection-spectrum-css-release@^3.6.0":
-  version "3.6.0"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-spectrum-css-release/-/@a4u/a4u-collection-spectrum-css-release-3.6.0.tgz#9b5e8af3f8c1dc747a5f560e6045b4215870e23d"
-  integrity sha1-m16K8/jB3HR6X1YOYEW0IVhw4j0=
+"@a4u/a4u-collection-spectrum-css-release@^4.0.0":
+  version "4.0.0"
+  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-spectrum-css-release/-/@a4u/a4u-collection-spectrum-css-release-4.0.0.tgz#f198fadaaf01c027f565f772b3eb2b0fe529edfe"
+  integrity sha1-8Zj62q8BwCf1Zfdys+srD+Up7f4=
 
 "@adobe/spectrum-css@^2.13.0":
   version "2.18.0"
