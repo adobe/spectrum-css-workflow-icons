@@ -40,7 +40,7 @@
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "^2.0.0",
     "@a4u/a4u-collection-react-spectrum-open-source-release": "^4.1.0",
-    "@a4u/a4u-collection-spectrum-css-release": "^4.0.0"
+    "@a4u/a4u-collection-spectrum-css-release": "^4.1.0"
   },
   "resolutions": {
     "yargs-parser": "^20.0.0"
