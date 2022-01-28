@@ -9,7 +9,7 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const {task, series, src, dest, parallel} = require('gulp');
+const { task, series, src, dest, parallel } = require('gulp');
 const svgmin = require('gulp-svgmin');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
@@ -28,17 +28,22 @@ task('delete-icons', () =>
 
 task('clean-icons', () =>
   src('node_modules/@a4u/a4u-collection-spectrum-css-release/assets/*/*.svg')
-    .pipe(svgmin({
-      plugins: [
-        {removeViewBox: false}
-      ]
-    }))
     .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
     .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
     .pipe(svgmin({
+      full: true,
       plugins: [
         {
-          removeAttrs: {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              removeViewBox: false,
+            }
+          }
+        },
+        {
+          name: 'removeAttrs',
+          params: {
             attrs: [
               'class',
               'data-name',
@@ -46,41 +51,38 @@ task('clean-icons', () =>
               '*:fill:((?!^none$).)*'
             ]
           }
-        },
-        {collapseGroups: true},
-        {removeViewBox: false}
+        }
       ]
     }))
     .pipe(rename(function (filePath) {
       filePath.basename = filePath.basename.replace(/S_(.*?)_.*/, '$1');
     }))
-    .pipe(dest('icons/workflow/'))
+    .pipe(dest('icons/workflow'))
 );
 
 task('clean-icons-color', () =>
   src([
     'node_modules/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release/assets/24/*.svg'
-  ])
+  ]).pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
     .pipe(svgmin({
-      plugins: [
-        {removeViewBox: false}
-      ]
-    }))
-    // .pipe(replace(/<style>[\s\S]*?<\/style>/m, ''))
-    .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
-    .pipe(svgmin({
+      full: true,
       plugins: [
         {
-          removeAttrs: {
-            attrs: [
-              'data-name'
-              // 'class',
-              // 'id'
-            ]
+          name: 'preset-default',
+          params: {
+            overrides: {
+              removeViewBox: false,
+            }
           }
         },
-        {collapseGroups: true},
-        {removeViewBox: false}
+        {
+          name: 'removeAttrs',
+          params: {
+            attrs: [
+              'data-name'
+            ]
+          }
+        }
       ]
     }))
     .pipe(rename((filePath) => {
@@ -132,7 +134,7 @@ function generateSVGSprite(sources, filename) {
     }))
     .pipe(svgmin({
       plugins: [
-        {removeViewBox: false}
+        { removeViewBox: false }
       ]
     }))
     .pipe(svgstore({
