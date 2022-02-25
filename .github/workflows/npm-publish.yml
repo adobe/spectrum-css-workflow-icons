@@ -12,27 +12,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@main
     - name: Set up Node.js
-      uses: actions/setup-node@main
+      uses: actions/setup-node@v2
       with:
-        node-version: 14.16.0
-    - name: Prepare package.json for @adobe/spectrum-css-workflow-icons release
-      run: mv package-publish.json dist/spectrum-css-workflow-icons/package.json
-    - name: Publish if version has been updated
-      uses: mkiki/npm-publish-action@c4315ef5790b7bcec2cbb75b34e37681a409d78d
-      with: # All of theses inputs are optional
-        commit_pattern: "^Release (\\S+)"
-        workspace: "dist/spectrum-css-workflow-icons/"
+        node-version: '14.16.0'
+        registry-url: 'https://registry.npmjs.org'
+    - name: Prepare package.json for @adobe/spectrum-css-workflow-icons package
+      run: cp package-publish.json dist/spectrum-css-workflow-icons/package.json
+      run: cp COPYRIGHT CODE_OF_CONDUCT.md LICENSE README.md dist/spectrum-css-workflow-icons/
+    - name: Publish @adobe/spectrum-css-workflow-icons package
+      working-directory: ./dist/spectrum-css-workflow-icons/
+      run: npm publish
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
         NPM_AUTH: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
-    - name: Prepare package.json for @adobe/react-spectrum-workflow release
-      run: mv package-rsp-publish.json dist/react-spectrum-workflow/package.json
-    - name: Publish if version has been updated
-      uses: mkiki/npm-publish-action@c4315ef5790b7bcec2cbb75b34e37681a409d78d
-      with: # All of theses inputs are optional
-        commit_pattern: "^Release (\\S+)"
-        workspace: "dist/react-spectrum-workflow/"
+    - name: Prepare package.json for @adobe/react-spectrum-workflow package
+      run: cp package-publish.json dist/spectrum-css-workflow-icons/package.json
+      run: cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
+    - name: Publish @adobe/react-spectrum-workflow package
+      working-directory: ./dist/react-spectrum-workflow/
+      run: npm publish
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
