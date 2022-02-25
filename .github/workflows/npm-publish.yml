@@ -24,7 +24,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
     - name: Prepare files for @adobe/react-spectrum-workflow package
-      run: cp package-css-publish.json ./dist/react-spectrum-workflow/package.json && cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
+      run: cp package-rsp-publish.json ./dist/react-spectrum-workflow/package.json && cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
     - name: Publish @adobe/react-spectrum-workflow package
       working-directory: ./dist/react-spectrum-workflow/
       run: npm publish
