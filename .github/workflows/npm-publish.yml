@@ -1,4 +1,3 @@
-
 name: npm-publish
 on:
   push:
@@ -16,19 +15,19 @@ jobs:
       with:
         node-version: '14.16.0'
         registry-url: 'https://registry.npmjs.org'
-    - name: Prepare package.json for @adobe/spectrum-css-workflow-icons package
-      run: cp package-publish.json dist/spectrum-css-workflow-icons/package.json && cp COPYRIGHT CODE_OF_CONDUCT.md LICENSE README.md dist/spectrum-css-workflow-icons/
+    - name: Prepare files for @adobe/spectrum-css-workflow-icons package
+      run: cp package-css-publish.json ./dist/spectrum-css-workflow-icons/package.json && cp COPYRIGHT CODE_OF_CONDUCT.md LICENSE README.md dist/spectrum-css-workflow-icons/
     - name: Publish @adobe/spectrum-css-workflow-icons package
       working-directory: ./dist/spectrum-css-workflow-icons/
       run: npm publish
-      env: # More info about the environment variables in the README
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
-    - name: Prepare package.json for @adobe/react-spectrum-workflow package
-      run: cp package-publish.json dist/spectrum-css-workflow-icons/package.json && cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
+    - name: Prepare files for @adobe/react-spectrum-workflow package
+      run: cp package-css-publish.json ./dist/react-spectrum-workflow/package.json && cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
     - name: Publish @adobe/react-spectrum-workflow package
       working-directory: ./dist/react-spectrum-workflow/
       run: npm publish
-      env: # More info about the environment variables in the README
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}

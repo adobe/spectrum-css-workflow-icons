@@ -1,13 +1,10 @@
 {
   "name": "@adobe/spectrum-css-workflow-icons",
-  "version": "1.0.1",
-  "main": "dist/icons.json",
+  "version": "1.0.2",
   "scripts": {
     "build": "gulp",
     "build-icons": "gulp icons",
-    "clean": "gulp clean",
-    "prepublishOnly": "mv package.json package.json.bak && mv package-publish.json package.json",
-    "postpublish": "mv package.json package-publish.json && mv package.json.bak package.json"
+    "clean": "gulp clean"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
