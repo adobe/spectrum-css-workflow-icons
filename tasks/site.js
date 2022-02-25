@@ -16,8 +16,8 @@ const template = require('gulp-template');
 const fs = require('fs');
 
 task('copy-svg-files', () =>
-  src('icons/workflow/**')
-    .pipe(dest('dist/'))
+  src('icons/spectrum-css/workflow/**')
+    .pipe(dest('dist/spectrum-css-workflow-icons'))
 );
 
 task('copy-sites-files', () =>
@@ -25,13 +25,13 @@ task('copy-sites-files', () =>
     'sites/shared/**/*',
     'sites/svg/**/*'
   ])
-    .pipe(dest('dist/sites'))
+    .pipe(dest('dist/spectrum-css-workflow-icons/sites'))
 );
 
 task('copy-loadIcons', () =>
   src('node_modules/loadicons/index.js')
     .pipe(rename('loadIcons.js'))
-    .pipe(dest('dist/sites/lib/'))
+    .pipe(dest('dist/spectrum-css-workflow-icons/sites/lib/'))
 );
 
 task('copy-spectrum-css', () =>
@@ -39,29 +39,29 @@ task('copy-spectrum-css', () =>
     'node_modules/@adobe/spectrum-css/dist/*.css',
     'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'
   ])
-    .pipe(dest('dist/sites/spectrum-css/'))
+    .pipe(dest('dist/spectrum-css-workflow-icons/sites/spectrum-css/'))
 );
 
 task('build-svg-css', () =>
-  src('dist/sites/spectrum-icons.styl')
+  src('dist/spectrum-css-workflow-icons/sites/spectrum-icons.styl')
     .pipe(stylus())
-    .pipe(dest('dist/sites/'))
+    .pipe(dest('dist/spectrum-css-workflow-icons/sites/'))
 );
 
 task('generate-svg-examples', () =>
   src('sites/svg/index.html')
     .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-icons.svg', 'utf8'),
-      icons: JSON.parse(fs.readFileSync('dist/icons.json', 'utf8'))
+      svgsprite: fs.readFileSync('dist/spectrum-css-workflow-icons/spectrum-icons.svg', 'utf8'),
+      icons: JSON.parse(fs.readFileSync('dist/spectrum-css-workflow-icons/icons.json', 'utf8'))
     }))
-    .pipe(dest('dist/'))
+    .pipe(dest('dist/spectrum-css-workflow-icons'))
 );
 
 task('generate-svg-color-examples', () =>
   src('sites/svg/color.html')
     .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-icons-color.svg', 'utf8'),
-      icons: JSON.parse(fs.readFileSync('dist/icons-color.json', 'utf8'))
+      svgsprite: fs.readFileSync('dist/spectrum-css-workflow-icons/spectrum-icons-color.svg', 'utf8'),
+      icons: JSON.parse(fs.readFileSync('dist/spectrum-css-workflow-icons/icons-color.json', 'utf8'))
     }))
-    .pipe(dest('dist/'))
+    .pipe(dest('dist/spectrum-css-workflow-icons'))
 );

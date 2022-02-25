@@ -1,6 +1,6 @@
 {
   "name": "@adobe/spectrum-css-workflow-icons",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.1",
   "main": "dist/icons.json",
   "scripts": {
     "build": "gulp",
@@ -15,9 +15,21 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/spectrum-css": "^2.13.0",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-export-default-from": "^7.16.7",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.17.0",
+    "babel-plugin-add-header-comment": "^1.0.3",
+    "babel-plugin-react-svg": "^3.0.3",
     "del": "^6.0.0",
     "glob": "^7.2.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-bump": "^3.2.0",
     "gulp-git": "^2.10.1",
     "gulp-rename": "^2.0.0",
@@ -36,9 +48,8 @@
     "vinyl": "^2.2.1"
   },
   "optionalDependencies": {
-    "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "^2.0.0",
-    "@a4u/a4u-collection-react-spectrum-open-source-release": "^4.2.0",
-    "@a4u/a4u-collection-spectrum-css-release": "^4.3.0"
+    "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
+    "@a4u/a4u-spectrum-open-source": "^4.0.2"
   },
   "resolutions": {
     "glob-parent": "^5.1.2",

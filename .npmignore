@@ -10,3 +10,6 @@
 /icons
 npm-debug.log
 /.idea
+/yarn.lock
+/package-publish.json
+/package-rsp-publish.json

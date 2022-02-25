@@ -9,12 +9,13 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const {task, series, parallel} = require('gulp');
+const {task, series, parallel, src, dest} = require('gulp');
 const del = require('del');
 
 require('./tasks/icons');
 require('./tasks/release');
 require('./tasks/site');
+require('./tasks/rsp');
 
 task('clean', () =>
   del('dist')
@@ -30,7 +31,8 @@ task('build', series(
   ),
   'build-svg-css',
   'generate-svg-examples',
-  'generate-svg-color-examples'
+  'generate-svg-color-examples',
+  'babel-transpile-rsp'
 ));
 
 task('default', series('build'));
