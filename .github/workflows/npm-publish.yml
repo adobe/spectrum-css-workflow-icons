@@ -5,8 +5,8 @@ on:
     branches:
       - main
 jobs:
-  spectrum-css-npm-publish:
-    name: spectrum-css-npm-publish
+  npm-packages-publish:
+    name: npm-packages-publish
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -23,8 +23,7 @@ jobs:
       run: npm publish
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-        NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
-        NPM_AUTH: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
+        NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
     - name: Prepare package.json for @adobe/react-spectrum-workflow package
       run: cp package-publish.json dist/spectrum-css-workflow-icons/package.json && cp LICENSE_rsp dist/react-spectrum-workflow/LICENSE
     - name: Publish @adobe/react-spectrum-workflow package
@@ -32,5 +31,4 @@ jobs:
       run: npm publish
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-        NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
-        NPM_AUTH: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
+        NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
