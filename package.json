@@ -11,46 +11,6 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@adobe/spectrum-css": "^2.13.0",
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
-    "@babel/plugin-proposal-export-default-from": "^7.16.7",
-    "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
-    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/plugin-syntax-jsx": "^7.16.7",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@babel/register": "^7.17.0",
-    "babel-plugin-add-header-comment": "^1.0.3",
-    "babel-plugin-react-svg": "^3.0.3",
-    "del": "^6.0.0",
-    "glob": "^7.2.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-bump": "^3.2.0",
-    "gulp-git": "^2.10.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.1.3",
-    "gulp-stylus": "^2.7.1",
-    "gulp-svgcombiner": "^1.0.2",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-svgstore": "^9.0.0",
-    "gulp-template": "^5.0.0",
-    "inquirer": "^8.2.0",
-    "loadicons": "^1.0.0",
-    "merge-stream": "^2.0.0",
-    "plugin-error": "^1.0.1",
-    "semver": "^7.3.5",
-    "through2": "^4.0.2",
-    "vinyl": "^2.2.1"
-  },
-  "optionalDependencies": {
-    "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
-    "@a4u/a4u-spectrum-open-source": "^4.0.2"
-  },
-  "resolutions": {
-    "glob-parent": "^5.1.2",
-    "trim-newlines": "^4.0.1",
-    "nth-check": "^2.0.1"
+    "backstopjs-spectrum": "^6.12.0"
   }
 }
