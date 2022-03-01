@@ -24,7 +24,7 @@ function A4uSubscribe(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("polygon", {
     fillRule: "evenodd",
     points: "24.779 21.963 36 30.367 36 17.333 36 13.541 24.779 21.963"

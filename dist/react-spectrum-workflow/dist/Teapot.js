@@ -24,7 +24,7 @@ function A4uTeapot(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M26.047,11a11.1,11.1,0,0,0-6.675-3.136,2.211,2.211,0,0,0,.878-1.739,2.25,2.25,0,0,0-4.5,0A2.212,2.212,0,0,0,16.756,7.95,11.161,11.161,0,0,0,10.7,11Z"

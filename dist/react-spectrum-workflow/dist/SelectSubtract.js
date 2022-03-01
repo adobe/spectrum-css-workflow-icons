@@ -24,7 +24,7 @@ function A4uSelectSubtract(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M30,14V12h2v3.111a.889.889,0,0,1-.889.889H28V14Z"

@@ -24,7 +24,7 @@ function A4uVectorDraw(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33.134,11.26,24.718,2.846a1.068,1.068,0,0,0-1.51,0L19.491,6.562a1.052,1.052,0,0,0-.147,1.289l8.42,8.42.008-.017.186.183a1.066,1.066,0,0,0,1.509,0l3.667-3.666A1.066,1.066,0,0,0,33.134,11.26Z"

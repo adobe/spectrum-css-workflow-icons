@@ -24,7 +24,7 @@ function A4uGraphProfitCurve(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2.513,2.006A.51.51,0,0,0,2,2.514v1a.5.5,0,0,0,.492.493A28.07,28.07,0,0,1,22.036,12H20v2h3.89a30.937,30.937,0,0,1,7.1,19.512.494.494,0,0,0,.493.49h1a.508.508,0,0,0,.507-.512C32.745,16.791,20.308,2.28,2.513,2.006Z"

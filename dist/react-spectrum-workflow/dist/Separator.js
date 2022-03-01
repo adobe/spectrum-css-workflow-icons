@@ -24,7 +24,7 @@ function A4uSeparator(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M29,4H7A1,1,0,0,0,6,5v9H30V5A1,1,0,0,0,29,4ZM6,31a1,1,0,0,0,1,1H29a1,1,0,0,0,1-1V22H6Z"

@@ -24,7 +24,7 @@ function A4uGraphConfidenceBands(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M15.9,20.984a1,1,0,0,0,.582-1.814l-1.627-1.162A1,1,0,1,0,13.7,19.637L15.322,20.8A1.009,1.009,0,0,0,15.9,20.984Z"

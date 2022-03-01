@@ -24,7 +24,7 @@ function A4uViewedMarkAs(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M22.794,15.554A5,5,0,0,0,23.063,14a4.691,4.691,0,0,0-.175-1.2,2.623,2.623,0,0,1-2.221,1.279A2.667,2.667,0,0,1,18,11.417a2.631,2.631,0,0,1,1.35-2.269A4.916,4.916,0,0,0,18,8.938a5.052,5.052,0,0,0-.272,10.1A12.3,12.3,0,0,1,22.794,15.554Z"

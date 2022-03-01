@@ -24,7 +24,7 @@ function A4uTableau(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("polygon", {
     fillRule: "evenodd",
     points: "24 16.5 19.5 16.5 19.5 12 16.5 12 16.5 16.5 12 16.5 12 19.5 16.5 19.5 16.5 24 19.5 24 19.5 19.5 24 19.5 24 16.5"

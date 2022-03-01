@@ -24,7 +24,7 @@ function A4uTextTracking(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M26.366,6.7c-.432,1.809-1.8,5.807-2.609,8.264h5.3c-.567-1.783-2.123-6.373-2.664-8.264Z"

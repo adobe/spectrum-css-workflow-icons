@@ -24,7 +24,7 @@ function A4uPending(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M20,16.086V7a1,1,0,0,0-1-1H17a1,1,0,0,0-1,1V17.586a1,1,0,0,0,.293.707L21.9,23.9a1,1,0,0,0,1.415,0l1.335-1.335a1,1,0,0,0,0-1.415l-4.357-4.357A1,1,0,0,1,20,16.086Z"

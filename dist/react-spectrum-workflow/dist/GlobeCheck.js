@@ -24,7 +24,7 @@ function A4uGlobeCheck(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14.7,27a12.316,12.316,0,0,1,.408-3.1,50.148,50.148,0,0,0-2.772-4.5c-2.073-3.086-3.958-1.178-5.19-5.636C6.1,9.982,8.8,8.352,8.534,5.116A16.073,16.073,0,0,0,2,18c0,9.112,7.943,14.542,13.554,15.732A6.889,6.889,0,0,0,16.6,33.9c.03-.077.047-.155.075-.232A12.226,12.226,0,0,1,14.7,27Z"

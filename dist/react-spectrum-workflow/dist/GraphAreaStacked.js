@@ -24,7 +24,7 @@ function A4uGraphAreaStacked(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M30.371,16.321,34,23.578v9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1v-15l10,12L15.584,24.2a.5.5,0,0,1,.832,0L20,29.578l9.517-13.324A.5.5,0,0,1,30.371,16.321Z"

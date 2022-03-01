@@ -24,7 +24,7 @@ function A4uJourneyEvent2(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M27.1,18.1A8.9,8.9,0,1,0,36,27,8.9,8.9,0,0,0,27.1,18.1Zm0,16a7.1,7.1,0,0,1-1-14.121V27a1,1,0,0,0,.293.707l3.022,3.023a.5.5,0,0,0,.708,0l.707-.708a.5.5,0,0,0,0-.707L28.1,26.586V19.978a7.1,7.1,0,0,1-1,14.122Z"

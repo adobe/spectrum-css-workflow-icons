@@ -24,7 +24,7 @@ function A4uQuickSelect(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M16.333,17.814a4.468,4.468,0,0,0-3.14.838,6.435,6.435,0,0,0-1.968,3.436c-.433,1.378-.948,2.877-2.182,3.627a2.28,2.28,0,0,0-.588.41.524.524,0,0,0-.062.657.729.729,0,0,0,.4.189c3.317.764,7.549,1.018,10.278-1.434a4.4,4.4,0,0,0-1.281-7.327A4.714,4.714,0,0,0,16.333,17.814Z"

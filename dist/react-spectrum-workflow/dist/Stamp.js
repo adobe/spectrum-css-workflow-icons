@@ -24,7 +24,7 @@ function A4uStamp(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M25.273,15.333a2.728,2.728,0,0,0-5.455,0v5.333a2.728,2.728,0,0,0,5.455,0Z"

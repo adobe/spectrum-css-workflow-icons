@@ -24,7 +24,7 @@ function A4uMaximize(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14.077,20.707a1,1,0,0,0-1.414,0L6.179,27.191,3.2,24.206A.688.688,0,0,0,2.705,24a.7.7,0,0,0-.7.7v8.84A.5.5,0,0,0,2.459,34H11.3a.7.7,0,0,0,.7-.7.685.685,0,0,0-.207-.49L8.809,29.821l6.484-6.484a1,1,0,0,0,0-1.414Z"

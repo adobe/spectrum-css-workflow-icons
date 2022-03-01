@@ -24,7 +24,7 @@ function A4uTextSizeAdd(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M13.5,18a.5.5,0,0,1,.5.5v3a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V20H8V30H9.5a.5.5,0,0,1,.5.5v1a.5.5,0,0,1-.5.5h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5H6V20H2v1.473a.5.5,0,0,1-.5.5H.5a.5.5,0,0,1-.5-.5V18.5A.5.5,0,0,1,.5,18Z",

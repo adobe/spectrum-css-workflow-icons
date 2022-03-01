@@ -24,7 +24,7 @@ function A4uSelectCircular(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M11.8,5.46l-.654-1.9A16.023,16.023,0,0,0,6,7.428L7.657,8.587A14.014,14.014,0,0,1,11.8,5.46Z"

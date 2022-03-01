@@ -24,7 +24,7 @@ function A4uMarginLeft(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M32,32H18V4H32Zm2,1V3a1,1,0,0,0-1-1H17a1,1,0,0,0-1,1V33a1,1,0,0,0,1,1H33A1,1,0,0,0,34,33Z"

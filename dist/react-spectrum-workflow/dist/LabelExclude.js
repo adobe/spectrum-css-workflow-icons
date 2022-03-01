@@ -24,7 +24,7 @@ function A4uLabelExclude(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14.7,27.1A12.3,12.3,0,0,1,31.754,15.755L18.293,2.293A1,1,0,0,0,17.586,2H3A1,1,0,0,0,2,3V17.586a1,1,0,0,0,.293.707L15.539,31.539A12.25,12.25,0,0,1,14.7,27.1ZM8,10.6A2.6,2.6,0,1,1,10.6,8,2.6,2.6,0,0,1,8,10.6Z"

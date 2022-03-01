@@ -24,7 +24,7 @@ function A4uTextSuperscript(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M3,4A1,1,0,0,0,2,5v6a1,1,0,0,0,1,1H5a1,1,0,0,0,1-1V8h6V28H9a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V29a1,1,0,0,0-1-1H16V8h6v3a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1Z"

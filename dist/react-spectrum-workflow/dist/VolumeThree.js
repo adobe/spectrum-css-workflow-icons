@@ -24,7 +24,7 @@ function A4uVolumeThree(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M6.74545,12.07316H1a1,1,0,0,0-1,1V22.9964a1,1,0,0,0,1,1H6.74545a1.42873,1.42873,0,0,1,.93031.34466L14.80606,31.6A.72683.72683,0,0,0,16,31.02868V5a.72576.72576,0,0,0-1.19394-.57132L7.67879,11.72851A1.43664,1.43664,0,0,1,6.74545,12.07316Z"

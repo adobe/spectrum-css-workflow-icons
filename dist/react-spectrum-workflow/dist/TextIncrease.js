@@ -24,7 +24,7 @@ function A4uTextIncrease(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M27,18.1A8.9,8.9,0,1,0,35.9,27,8.9,8.9,0,0,0,27,18.1ZM31.661,30H22.34a.5.5,0,0,1-.376-.829l4.614-7.3a.5.5,0,0,1,.845,0l4.614,7.3A.5.5,0,0,1,31.661,30Z"

@@ -24,7 +24,7 @@ function A4uShowAllLayers(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M17.575,17.83,2.887,10.351c-.241-.123-.241-.323,0-.446l14.688-7.48a.943.943,0,0,1,.85,0L33.113,9.9c.241.123.241.323,0,.446L18.425,17.83A.936.936,0,0,1,17.575,17.83Z"
