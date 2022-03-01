@@ -7,8 +7,8 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node code-gen && react-scripts start",
+    "build": "node code-gen && react-scripts build",
     "postinstall": "node code-gen"
   },
   "browserslist": {
