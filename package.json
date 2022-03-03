@@ -2,9 +2,8 @@
   "name": "@adobe/spectrum-css-workflow-icons",
   "version": "1.0.2",
   "scripts": {
-    "build": "gulp",
-    "build-icons": "gulp icons",
-    "clean": "gulp clean"
+    "test-rsp-workflow": "backstop --config=vrt-rsp.js test",
+    "reference-rsp-workflow": "backstop --config=vrt-rsp.js approve"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"

@@ -33,7 +33,7 @@ module.exports = {
     html_report: `reports/html_report_${ext}`,
     ci_report: `reports/ci_report_${ext}`
   },
-  report: ['CI'],
+  report: ['browser'],
   engine: 'playwright',
   engineOptions: {
     browser: 'chromium'
