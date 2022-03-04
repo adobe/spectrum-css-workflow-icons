@@ -1,6 +1,6 @@
 {
   "name": "@adobe/spectrum-css-workflow-icons",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "dist/icons.json",
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
