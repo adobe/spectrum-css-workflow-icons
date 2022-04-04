@@ -8,9 +8,9 @@
   "version" "2.0.0"
 
 "@a4u/a4u-spectrum-open-source@latest":
-  "integrity" "sha1-XA4oIgYYp4e7YbcxikWDfVwXJto="
-  "resolved" "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-a4u-release/@a4u/a4u-spectrum-open-source/-/@a4u/a4u-spectrum-open-source-5.0.0.tgz"
-  "version" "5.0.0"
+  "integrity" "sha1-1QfEUZI4lnIMhCFW8UfVYpAf/VY="
+  "resolved" "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-a4u-release/@a4u/a4u-spectrum-open-source/-/@a4u/a4u-spectrum-open-source-6.0.0.tgz"
+  "version" "6.0.0"
 
 "@adobe/spectrum-css@^2.13.0":
   "integrity" "sha512-DhfQ3vPt2FAx5tcoPq3HeHuKBqty0M+d5TPdPkl1hZFdxaqE9jac7qUblyz4lQczqyG/U/M4BjVpvp0Qc8iecw=="
