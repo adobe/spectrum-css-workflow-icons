@@ -36,6 +36,7 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-template": "^5.0.0",
+    "gulp-util": "^3.0.8",
     "inquirer": "^8.2.0",
     "loadicons": "^1.0.0",
     "merge-stream": "^2.0.0",

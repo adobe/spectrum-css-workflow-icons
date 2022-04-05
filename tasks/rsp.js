@@ -1,5 +1,6 @@
-const {task, src, dest} = require('gulp');
+const { task, src, dest } = require('gulp');
 const babel = require('gulp-babel');
+const barrelIndex = require('../plugins/barrelIndex');
 
 task('babel-transpile-rsp', () => createBabelTranspileTask('node_modules/@a4u/a4u-spectrum-open-source/assets/S_ReactFrameworkEssential/**/*', 'dist/react-spectrum-workflow/dist', `@adobe/react-spectrum-workflow (c) by Adobe
 
@@ -13,22 +14,23 @@ const createBabelTranspileTask =
   (source, destination, licenseHeader) =>
     src(source)
       .pipe(babel({
-          'presets': [
-            '@babel/preset-env',
-            '@babel/preset-react'
-          ],
-          'plugins': [
-            '@babel/plugin-proposal-export-default-from',
-            '@babel/plugin-proposal-export-namespace-from',
-            '@babel/plugin-proposal-object-rest-spread',
-            '@babel/plugin-syntax-jsx',
-            'babel-plugin-react-svg',
-            ['babel-plugin-add-header-comment', {
-              'header': [
-                licenseHeader
-              ]
-            }]
-          ]
-        }
+        'presets': [
+          '@babel/preset-env',
+          '@babel/preset-react'
+        ],
+        'plugins': [
+          '@babel/plugin-proposal-export-default-from',
+          '@babel/plugin-proposal-export-namespace-from',
+          '@babel/plugin-proposal-object-rest-spread',
+          '@babel/plugin-syntax-jsx',
+          'babel-plugin-react-svg',
+          ['babel-plugin-add-header-comment', {
+            'header': [
+              licenseHeader
+            ]
+          }]
+        ]
+      }
       ))
+      .pipe(barrelIndex())
       .pipe(dest(destination));

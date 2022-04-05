@@ -16,7 +16,7 @@ const File = require('vinyl');
 module.exports = function (fileName) {
   const fileNames = [];
 
-  function addFileName(file, encoding, callback) {
+  function addFileName(file, _, callback) {
     fileNames.push(path.basename(file.path));
     callback();
   }
