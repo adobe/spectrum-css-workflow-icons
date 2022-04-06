@@ -24,7 +24,7 @@ function A4uLocationBasedEvent(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M20.5,14.054a.494.494,0,0,0-.5.5V34.336a.494.494,0,0,0,.846.353L26.51,29h8c.446,0,.479-.726.225-.98S20.846,14.2,20.846,14.2A.489.489,0,0,0,20.5,14.054Z"

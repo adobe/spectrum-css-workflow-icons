@@ -24,7 +24,7 @@ function A4uUserLock(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14,25.013a2.737,2.737,0,0,1,1.833-2.86c0-3.219,2.049-4.882,3.108-5.964A10.942,10.942,0,0,0,21.88,8.453c0-5.2-2.756-8.1-6.919-8.1s-7,3.018-7,8.1a11.121,11.121,0,0,0,2.622,6.866,1.443,1.443,0,0,1,.367.93v2.074A1.431,1.431,0,0,1,9.7,19.767C1.338,20.5.031,26.217.031,28.474.031,28.725,0,30,0,30H14Z"

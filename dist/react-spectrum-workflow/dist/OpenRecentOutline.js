@@ -24,7 +24,7 @@ function A4uOpenRecentOutline(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M16.051,28H4L8.689,14H33.225l-1.093,3.279a10.983,10.983,0,0,1,1.729,1.138l1.7-5.1A1,1,0,0,0,34.613,12H32V9a1,1,0,0,0-1-1h0l-12.332.007-3.3-3.4A2,2,0,0,0,13.929,4H4A2,2,0,0,0,2,6V29a1,1,0,0,0,1,1H16.427A10.837,10.837,0,0,1,16.051,28Z"

@@ -24,7 +24,7 @@ function A4uGraphBarVerticalAdd(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M23,12H19a1,1,0,0,0-1,1v5.635a12.269,12.269,0,0,1,6-3.551V13A1,1,0,0,0,23,12Z"

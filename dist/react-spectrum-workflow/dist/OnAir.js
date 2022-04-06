@@ -24,7 +24,7 @@ function A4uOnAir(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M21.812,18.678a.5.5,0,0,0-.107.678l.574.823a.5.5,0,0,0,.716.115,8,8,0,1,0-9.971.015.5.5,0,0,0,.718-.117l.571-.824a.5.5,0,0,0-.109-.679,6,6,0,0,1,5.26-10.471,5.913,5.913,0,0,1,3.991,3.3A6.02,6.02,0,0,1,21.812,18.678Z"

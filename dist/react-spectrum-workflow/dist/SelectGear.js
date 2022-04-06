@@ -24,7 +24,7 @@ function A4uSelectGear(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M6,8.731V6H8.707c.01,0,.02,0,.029,0l.015,0H16v6.107l4,3.982V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V18a2,2,0,0,0,2,2H6Z"

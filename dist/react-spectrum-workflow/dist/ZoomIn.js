@@ -24,7 +24,7 @@ function A4uZoomIn(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M21.5,14H18V10.5a.5.5,0,0,0-.5-.5h-3a.5.5,0,0,0-.5.5V14H10.5a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5H14v3.5a.5.5,0,0,0,.5.5h3a.5.5,0,0,0,.5-.5V18h3.5a.5.5,0,0,0,.5-.5v-3A.5.5,0,0,0,21.5,14Z"

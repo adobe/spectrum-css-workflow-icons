@@ -24,7 +24,7 @@ function A4uUserArrow(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M10.874,19.622a.5.5,0,0,0-.874.332V24H3a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h7v3.818a.5.5,0,0,0,.874.332L18,27Z"

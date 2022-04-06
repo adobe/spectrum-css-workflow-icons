@@ -24,7 +24,7 @@ function A4uRetweet(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M12,24V14h2a.5.5,0,0,0,.4-.8L9,6,3.6,13.2A.5.5,0,0,0,4,14H6V24a6,6,0,0,0,6,6H24l-4.759-6Z"

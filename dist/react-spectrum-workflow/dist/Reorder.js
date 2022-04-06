@@ -24,7 +24,7 @@ function A4uReorder(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M18,4a.994.994,0,0,0-.747.336l-11,10A.979.979,0,0,0,6,14.994,1,1,0,0,0,7,16H29a1,1,0,0,0,1-1.006.979.979,0,0,0-.255-.658l-11-10A1,1,0,0,0,18,4Z"

@@ -24,7 +24,7 @@ function A4uOpenInLight(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M4,15.5V4H32V30H18.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H33a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3V15.5a.5.5,0,0,0,.5.5h1A.5.5,0,0,0,4,15.5Z"

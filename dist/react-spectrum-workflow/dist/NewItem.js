@@ -24,7 +24,7 @@ function A4uNewItem(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M6,6H28V28H6ZM5.2002,4A1.18942,1.18942,0,0,0,4,5.2002V29a.99934.99934,0,0,0,1,1H28.7998A1.18942,1.18942,0,0,0,30,28.7998V5.2002A1.18893,1.18893,0,0,0,28.7998,4Z"

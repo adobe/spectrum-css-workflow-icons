@@ -24,7 +24,7 @@ function A4uShareWindows(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33.174,16.724A13.773,13.773,0,0,0,31.9,12.26a7.712,7.712,0,0,1-2.736,2.45A10.216,10.216,0,0,1,28,23.955a5.236,5.236,0,1,0,2.327,2.7A13.676,13.676,0,0,0,33.174,16.724Z"

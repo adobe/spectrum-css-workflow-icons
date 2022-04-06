@@ -24,7 +24,7 @@ function A4uPinOn(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M5.646,28l2.379,2.381-3.74,3.669a.5.5,0,0,1-.713-.01l-1.59-1.66a.5.5,0,0,1,.008-.7Z"

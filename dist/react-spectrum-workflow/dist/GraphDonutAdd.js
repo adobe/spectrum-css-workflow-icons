@@ -24,7 +24,7 @@ function A4uGraphDonutAdd(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M3.42,11.408A15.991,15.991,0,0,0,15.413,33.777.513.513,0,0,0,16,33.271V32.48a11.936,11.936,0,0,1-1.168-7.187,7.922,7.922,0,0,1-4.5-9.567.485.485,0,0,0-.192-.551L4.168,11.2A.514.514,0,0,0,3.42,11.408Z"

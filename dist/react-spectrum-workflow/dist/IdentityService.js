@@ -24,7 +24,7 @@ function A4uIdentityService(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M8.607,31.849a1,1,0,0,1-.546-1.838c7.322-4.776,9.058-13.395,9.076-13.482a1,1,0,0,1,1.963.379c-.075.387-1.921,9.544-9.948,14.779A1,1,0,0,1,8.607,31.849Z"

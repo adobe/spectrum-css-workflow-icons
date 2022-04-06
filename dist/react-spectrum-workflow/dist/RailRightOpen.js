@@ -24,7 +24,7 @@ function A4uRailRightOpen(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14,14h9.006a.994.994,0,0,1,.994.994v6.012a.994.994,0,0,1-.994.994H14v8.912a.5.5,0,0,1-.848.351L0,18,13.152,4.736A.5.5,0,0,1,14,5.088Z"

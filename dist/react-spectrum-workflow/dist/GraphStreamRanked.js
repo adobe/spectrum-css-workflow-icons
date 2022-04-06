@@ -24,7 +24,7 @@ function A4uGraphStreamRanked(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M22.42,27.532C16.185,27.783,14.172,29.5,10,29.5c-3.929,0-6.961-2-8-2V34H34V29.5C26.445,29.5,24.42,27.8,22.42,27.532Z"

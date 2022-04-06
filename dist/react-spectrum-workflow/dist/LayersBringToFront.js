@@ -24,7 +24,7 @@ function A4uLayersBringToFront(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2,8H4.007V33a.988.988,0,0,0,.987,1h.992a1,1,0,0,0,1-1L6.993,8H9a.5.5,0,0,0,.5-.5.49.49,0,0,0-.147-.35L5.816,3.113a.5.5,0,0,0-.632,0L1.647,7.146A.49.49,0,0,0,1.5,7.5.5.5,0,0,0,2,8Z"

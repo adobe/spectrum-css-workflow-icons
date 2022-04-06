@@ -24,7 +24,7 @@ function A4uPageBreak(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("polygon", {
     fillRule: "evenodd",
     points: "20 14 20 24 30 24 20 14"

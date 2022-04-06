@@ -24,7 +24,7 @@ function A4uGraphTrendAlert(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M35,33.809,26.341,16.651a1.5,1.5,0,0,0-2.678,0L15,33.809A1.55,1.55,0,0,0,16.407,36H33.593A1.55,1.55,0,0,0,35,33.809ZM24.5,20h1a.5.5,0,0,1,.5.5v7a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5v-7A.5.5,0,0,1,24.5,20Zm1.491,12.4H24.009a.409.409,0,0,1-.409-.409V30.009a.409.409,0,0,1,.409-.409h1.982a.409.409,0,0,1,.409.409v1.983A.409.409,0,0,1,25.991,32.4Z"

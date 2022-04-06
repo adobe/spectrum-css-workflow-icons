@@ -24,7 +24,7 @@ function A4uScribble(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M27.965,4.572a.965.965,0,0,0-.043-1.362.963.963,0,0,0-1.362-.044,1.329,1.329,0,0,0-.117.145L26.432,3.3l-8.739,8.736.012.016a.685.685,0,0,0-.145.119.995.995,0,0,0,1.4,1.4.909.909,0,0,0,.119-.145l.013.013L27.835,4.7l-.015-.013A.855.855,0,0,0,27.965,4.572Z"

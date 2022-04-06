@@ -24,7 +24,7 @@ function A4uRadialGradient(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     opacity: "0.07",
     d: "M18,12.356A5.644,5.644,0,1,0,23.644,18,5.644,5.644,0,0,0,18,12.356Z"

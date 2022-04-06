@@ -24,7 +24,7 @@ function A4uTextEdit(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M16,28V8h8v3a.99989.99989,0,0,0,1,1h2a.99989.99989,0,0,0,1-1V5a1.0032,1.0032,0,0,0-1-1H1A1.0032,1.0032,0,0,0,0,5v6a.99989.99989,0,0,0,1,1H3a.99989.99989,0,0,0,1-1V8h8V28H9a1,1,0,0,0-1,1v2a.99989.99989,0,0,0,1,1h5.66667Z"

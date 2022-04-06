@@ -24,7 +24,7 @@ function A4uGauge5(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2.035,18.754A16,16,0,0,1,34,19.813c0,.072-.013.142-.014.214l-3.02-.327a12.126,12.126,0,0,0-.344-2.892,13.2,13.2,0,0,0-13.17-9.984A13.016,13.016,0,0,0,5,19.813a12.878,12.878,0,0,0,.691,4.117.492.492,0,0,1-.116.506L4.013,26a.5.5,0,0,1-.818-.154A15.842,15.842,0,0,1,2.035,18.754Z"

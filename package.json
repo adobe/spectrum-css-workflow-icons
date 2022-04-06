@@ -47,7 +47,7 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
-    "@a4u/a4u-spectrum-open-source": "^4.0.2"
+    "@a4u/a4u-spectrum-open-source": "latest"
   },
   "resolutions": {
     "glob-parent": "^5.1.2",

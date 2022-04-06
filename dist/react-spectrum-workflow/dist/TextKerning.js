@@ -24,7 +24,7 @@ function A4uTextKerning(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M10.4,18.759c.6-2.106,1.945-6.7,4.51-14.287.054-.162.109-.216.243-.216H18.1c.134,0,.215.081.161.243L12.073,21.811A.235.235,0,0,1,11.8,22H8.67a.239.239,0,0,1-.269-.162L2.054,4.5c-.054-.135,0-.243.161-.243H5.322a.187.187,0,0,1,.215.161c2.567,7.1,4.321,12.343,4.808,14.342Z"

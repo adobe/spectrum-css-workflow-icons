@@ -24,7 +24,7 @@ function A4uLabels(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33.70313,15.507,18.493.297a1.014,1.014,0,0,0-.7171-.2969H5.014A1.014,1.014,0,0,0,4,1.014v12.762a1.01465,1.01465,0,0,0,.2969.7171l15.21012,15.21a1.01441,1.01441,0,0,0,1.43417,0L33.70313,16.941A1.01428,1.01428,0,0,0,33.70313,15.507ZM11,10a3,3,0,1,1,3-2.99988A3.00023,3.00023,0,0,1,11,10Z"

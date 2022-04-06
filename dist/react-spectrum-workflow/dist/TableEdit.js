@@ -24,7 +24,7 @@ function A4uTableEdit(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M17.292,28.438a3.522,3.522,0,0,1,.2-.438H12V24h9.167l2-2H12V18H27.167L29,16.172c.064-.065.138-.113.206-.172H12V12H30v3.457a3.55,3.55,0,0,1,1.5-.407l.115-.006h.092c.1,0,.2.02.294.028V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3V29a1,1,0,0,0,1,1H16.764ZM4,4H30v6H4Zm6,24H4V24h6Zm0-6H4V18h6Zm0-6H4V12h6Z"

@@ -24,7 +24,7 @@ function A4uTextDecrease(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M35.9,27A8.9,8.9,0,1,0,27,35.9,8.9,8.9,0,0,0,35.9,27Zm-3.863-2.171-4.614,7.3a.5.5,0,0,1-.845,0l-4.614-7.3A.5.5,0,0,1,22.34,24h9.321A.5.5,0,0,1,32.037,24.829Z"

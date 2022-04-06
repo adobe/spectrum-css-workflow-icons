@@ -24,7 +24,7 @@ function A4uSelectContainer(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33,6H7A1,1,0,0,0,6,7V33a1,1,0,0,0,1,1H33a1,1,0,0,0,1-1V7A1,1,0,0,0,33,6ZM14,32H8V28h6Zm0-6H8V22h6Zm0-6H8V16h6ZM32,32H16V28H32Zm0-6H16V22H32Zm0-6H16V16H32Zm0-6H8V8H32Z"

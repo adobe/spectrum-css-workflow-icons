@@ -24,7 +24,7 @@ function A4uPropertiesCopy(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M27,18a9,9,0,1,0,9,9A9,9,0,0,0,27,18Zm4.9,10.5H28.5v3.4a.5.5,0,0,1-.5.5H26a.5.5,0,0,1-.5-.5V28.5H22.1a.5.5,0,0,1-.5-.5V26a.5.5,0,0,1,.5-.5h3.4V22.1a.5.5,0,0,1,.5-.5h2a.5.5,0,0,1,.5.5v3.4h3.4a.5.5,0,0,1,.5.5v2A.5.5,0,0,1,31.9,28.5Z"

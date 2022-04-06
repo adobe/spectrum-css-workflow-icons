@@ -24,7 +24,7 @@ function A4uImport(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33,2H11a1,1,0,0,0-1,1V9a1.00005,1.00005,0,0,0,1,1h2a1.00036,1.00036,0,0,0,1-1V6H30V30H14V27a1.00028,1.00028,0,0,0-1-1H11a1,1,0,0,0-1,1v6a1.00005,1.00005,0,0,0,1,1H33a1,1,0,0,0,1-1V3A1,1,0,0,0,33,2Z"
