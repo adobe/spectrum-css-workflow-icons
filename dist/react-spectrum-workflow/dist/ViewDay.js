@@ -24,7 +24,7 @@ function A4uViewDay(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M18.332,28c-.216,0-.288-.076-.288-.264v-8.95a13.766,13.766,0,0,1-3.709,1.325c-.216.037-.288,0-.288-.227v-3.2c0-.188.036-.263.216-.3A16.954,16.954,0,0,0,19.2,14.151a.913.913,0,0,1,.54-.151H21.8c.143,0,.18.076.18.264V27.736c0,.188-.073.264-.216.264Z"

@@ -24,7 +24,7 @@ function A4uVisibilityOff(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14.573,9.44A9.215,9.215,0,0,1,26.56,21.427l2.945,2.945C32.1,22.183,33.75,19.76,33.75,18.36c0-2.364-4.214-7.341-9.137-9.78A14.972,14.972,0,0,0,18,6.937a14.36,14.36,0,0,0-4.989.941Z"

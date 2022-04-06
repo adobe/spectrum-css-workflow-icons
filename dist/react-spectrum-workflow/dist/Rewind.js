@@ -24,7 +24,7 @@ function A4uRewind(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M4,18,18.341,5.452A1,1,0,0,1,20,6.2V29.8a1,1,0,0,1-1.659.753Z"

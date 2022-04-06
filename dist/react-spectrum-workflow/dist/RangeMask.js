@@ -24,7 +24,7 @@ function A4uRangeMask(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M25.949,22.088a10.9,10.9,0,0,1-.846,3.279l1.776,1.026A12.944,12.944,0,0,0,28,22.088Z"

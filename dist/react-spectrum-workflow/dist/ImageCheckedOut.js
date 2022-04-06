@@ -24,7 +24,7 @@ function A4uImageCheckedOut(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33,4H3A1,1,0,0,0,2,5V27a1,1,0,0,0,1,1H15.55042c-.02857-.3302-.05042-.66235-.05042-1a11.45188,11.45188,0,0,1,3.205-7.9519l-5.43287-5.43287a2,2,0,0,0-2.82849,0L4,20.05884V6H32V16.29822A10.45162,10.45162,0,0,1,34,17.4V5A1,1,0,0,0,33,4ZM26.7,8.6A2.7,2.7,0,1,0,29.4,11.30005,2.7,2.7,0,0,0,26.7,8.6Z"

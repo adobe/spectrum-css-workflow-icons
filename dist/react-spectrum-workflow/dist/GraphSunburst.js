@@ -24,7 +24,7 @@ function A4uGraphSunburst(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M11.006,15.84h3.329a.494.494,0,0,0,.408-.226,4,4,0,0,1,1.075-1.076.494.494,0,0,0,.226-.408V10.8a.5.5,0,0,0-.648-.479,7.988,7.988,0,0,0-4.87,4.87A.5.5,0,0,0,11.006,15.84Z"

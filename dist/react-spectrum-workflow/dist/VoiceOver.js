@@ -24,7 +24,7 @@ function A4uVoiceOver(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M23.8,7.2a6.8,6.8,0,0,0-13.6,0V20.8a6.8,6.8,0,1,0,13.6,0Z"

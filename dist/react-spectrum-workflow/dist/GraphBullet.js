@@ -24,7 +24,7 @@ function A4uGraphBullet(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2,8.5v3a.5.5,0,0,0,.5.5H8V8H2.5A.5.5,0,0,0,2,8.5Z"

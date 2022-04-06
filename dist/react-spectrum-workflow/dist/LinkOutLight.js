@@ -24,7 +24,7 @@ function A4uLinkOutLight(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M32,17.5V30H4V4H18.5a.5.5,0,0,0,.5-.5v-1a.5.5,0,0,0-.5-.5H3A1,1,0,0,0,2,3V31a1,1,0,0,0,1,1H33a1,1,0,0,0,1-1V17.5a.5.5,0,0,0-.5-.5h-1A.5.5,0,0,0,32,17.5Z"

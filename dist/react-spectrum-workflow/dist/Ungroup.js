@@ -24,7 +24,7 @@ function A4uUngroup(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M9.123,4H31.36V26.237l2,2V3a1,1,0,0,0-1-1H7.123Z"

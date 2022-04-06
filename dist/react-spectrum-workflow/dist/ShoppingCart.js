@@ -24,7 +24,7 @@ function A4uShoppingCart(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("ellipse", {
     fillRule: "evenodd",
     cx: "10.445",

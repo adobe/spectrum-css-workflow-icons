@@ -24,7 +24,7 @@ function A4uVolumeMute(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M12,27a10.98316,10.98316,0,0,1,4-8.47839V5a.72593.72593,0,0,0-1.19434-.57129L8.167,11.22839c-.439.4469-.72619.84485-1.42187.84485H1a1,1,0,0,0-1,1v9.92285a1,1,0,0,0,1,1H6.74512c.69641,0,.99609.41138,1.42187.84485L12.17188,28.943A11.02155,11.02155,0,0,1,12,27Z"

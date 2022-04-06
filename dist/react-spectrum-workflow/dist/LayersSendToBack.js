@@ -24,7 +24,7 @@ function A4uLayersSendToBack(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M9.106,28.069H7.1v-25a.989.989,0,0,0-.986-1H5.121a1,1,0,0,0-1,1l-.006,25H2.108a.5.5,0,0,0-.5.5.49.49,0,0,0,.148.35l3.536,4.034a.5.5,0,0,0,.633,0L9.46,28.923a.489.489,0,0,0,.147-.35A.5.5,0,0,0,9.106,28.069Z"

@@ -24,7 +24,7 @@ function A4uOrganisations(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33,2H15a1,1,0,0,0-1,1V14H24V34h9a1,1,0,0,0,1-1V3A1,1,0,0,0,33,2ZM22,10H16V6h6ZM32,26H26V22h6Zm0-8H26V14h6Zm0-8H26V6h6Z"

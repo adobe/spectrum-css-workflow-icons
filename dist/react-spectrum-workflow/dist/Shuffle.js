@@ -24,7 +24,7 @@ function A4uShuffle(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M3,10H7.111l2.65,4.139,3.4-5.528L10.722,4.805a2,2,0,0,0-1.6-.8H3A1,1,0,0,0,2,5V9A1,1,0,0,0,3,10Z",

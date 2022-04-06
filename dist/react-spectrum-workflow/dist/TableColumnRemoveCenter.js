@@ -24,7 +24,7 @@ function A4uTableColumnRemoveCenter(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M8.1,27A8.9,8.9,0,1,0,17,18.1,8.9,8.9,0,0,0,8.1,27Zm3.9-.5a.5.5,0,0,1,.5-.5h9a.5.5,0,0,1,.5.5v1a.5.5,0,0,1-.5.5h-9a.5.5,0,0,1-.5-.5Z"

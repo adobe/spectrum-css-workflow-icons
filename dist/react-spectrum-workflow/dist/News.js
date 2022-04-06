@@ -24,7 +24,7 @@ function A4uNews(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33,6H5A1,1,0,0,0,4,7V27a1,1,0,0,1-2,0V10.5a.5.5,0,0,0-.5-.5H.5a.5.5,0,0,0-.5.5V27a3,3,0,0,0,3,3H31a3,3,0,0,0,3-3V7A1,1,0,0,0,33,6ZM31,28H6V8H32V27A1,1,0,0,1,31,28Z"

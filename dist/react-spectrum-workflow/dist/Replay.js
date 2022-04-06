@@ -24,7 +24,7 @@ function A4uReplay(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M14.338,10.14a.878.878,0,0,0-.475-.14h-.931A.968.968,0,0,0,12,11V25a.968.968,0,0,0,.932,1h.931a.878.878,0,0,0,.475-.14l11.205-7a1.038,1.038,0,0,0,0-1.72Z"

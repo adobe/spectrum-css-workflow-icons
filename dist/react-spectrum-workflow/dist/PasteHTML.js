@@ -24,7 +24,7 @@ function A4uPasteHTML(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M22,6V4a4,4,0,0,0-8,0V6H10v4H26V6ZM20,6H16V4a2,2,0,0,1,4,0Z"

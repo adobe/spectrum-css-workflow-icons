@@ -24,7 +24,7 @@ function A4uShareLight(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M24.476,7.165,18,0,11.54,7.165A.5.5,0,0,0,11.911,8H16V19.5a.5.5,0,0,0,.5.5h3a.5.5,0,0,0,.5-.5V8h4.105A.5.5,0,0,0,24.476,7.165Z"

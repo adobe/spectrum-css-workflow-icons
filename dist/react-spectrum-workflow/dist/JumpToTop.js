@@ -24,7 +24,7 @@ function A4uJumpToTop(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M22,22V33a1,1,0,0,1-1,1H13a1,1,0,0,1-1-1V22H5.007a.5.5,0,0,1-.354-.854L17,9,29.346,21.146a.5.5,0,0,1-.354.854Z"

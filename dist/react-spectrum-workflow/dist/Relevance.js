@@ -24,7 +24,7 @@ function A4uRelevance(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M4.225,15.585a13.987,13.987,0,0,1,11.36-11.36A.494.494,0,0,0,16,3.74V2.721a.5.5,0,0,0-.578-.5,15.992,15.992,0,0,0-13.2,13.2.5.5,0,0,0,.5.578H3.74A.494.494,0,0,0,4.225,15.585Z"

@@ -28,13 +28,21 @@ task('delete-icons', () =>
 
 task('clean-icons', () =>
   src('node_modules/@a4u/a4u-spectrum-open-source/assets/*/*.svg')
-    .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
-    .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
+    
+    .pipe(replace(/class=\"fillPale\"/g, 'opacity="0.2"'))
+    .pipe(replace(/class=\"fillMedium\"/g, 'opacity="0.5"'))
     .pipe(svgmin({
       full: true,
       plugins: [
-        {
+        'inlineStyles',
+        'convertStyleToAttrs',
+        'removeStyleElement',
+        'removeEmptyContainers',
+        'removeTitle',
+
+        {  
           name: 'preset-default',
+          
           params: {
             overrides: {
               removeViewBox: false,
@@ -50,10 +58,11 @@ task('clean-icons', () =>
               'id',
               '*:fill:((?!^none$).)*'
             ]
-          }
-        }
+          } 
+        } 
       ]
     }))
+
     .pipe(rename(function (filePath) {
       filePath.basename = filePath.basename.replace(/S_(.*?)_.*/, '$1');
       filePath.dirname = filePath.dirname.split('_').pop();

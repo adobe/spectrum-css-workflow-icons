@@ -24,7 +24,7 @@ function A4uLinkPage(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M16,28.355a8.153,8.153,0,0,1-2.074-.531c-.52.52-1.5,1.547-1.713,1.762a4.1,4.1,0,1,1-5.8-5.8L13.6,16.6a4.585,4.585,0,0,1,3.366-1.292A4.061,4.061,0,0,1,19.128,16h3.753a7.1,7.1,0,0,0-1.2-1.622,7.311,7.311,0,0,0-10.26.048L4.239,21.612A7.176,7.176,0,0,0,14.388,31.761c.216-.216.88-.9,1.612-1.641Z"

@@ -24,7 +24,7 @@ function A4uMoon(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M18,2A16,16,0,1,0,34,18,16,16,0,0,0,18,2Zm1,29.964c-.33.023-.664.036-1,.036A14,14,0,0,1,18,4c.336,0,.67.013,1,.036a22,22,0,0,0,0,27.928Z"

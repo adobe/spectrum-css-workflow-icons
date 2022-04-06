@@ -24,7 +24,7 @@ function A4uLinkOff(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("polygon", {
     fillRule: "evenodd",
     points: "11.136 9.523 9.64 10.963 4.312 5.723 5.808 4.284 11.136 9.523"

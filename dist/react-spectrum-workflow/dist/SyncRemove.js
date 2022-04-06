@@ -24,7 +24,7 @@ function A4uSyncRemove(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M22,13V7a1,1,0,0,0-1-1H10V1.207A.5.5,0,0,0,9.146.854L0,10l5.33,5.33A12.3,12.3,0,0,1,8.9,14.8c.371,0,.736.023,1.1.056V14H21A1,1,0,0,0,22,13Zm4.854-.146a.5.5,0,0,0-.854.353V18H17.154a12.253,12.253,0,0,1,3.99,8H26v4.793a.5.5,0,0,0,.854.353L36,22Z"

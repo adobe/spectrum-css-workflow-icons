@@ -24,7 +24,7 @@ function A4uPageExclude(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M15.059,30H2V10H30v5.184a12.273,12.273,0,0,1,2,.685V5a1,1,0,0,0-1-1H1A1,1,0,0,0,0,5V31a1,1,0,0,0,1,1H15.721A12.177,12.177,0,0,1,15.059,30Z"

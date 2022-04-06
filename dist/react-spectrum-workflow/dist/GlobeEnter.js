@@ -24,7 +24,7 @@ function A4uGlobeEnter(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M7.211,13.769C6.164,9.982,8.866,8.352,8.6,5.116A16.073,16.073,0,0,0,2.065,18c0,9.112,7.943,14.542,13.554,15.732a6.893,6.893,0,0,0,1.045.166c2-5.1-1.772-10.789-4.263-14.494C10.328,16.318,8.443,18.227,7.211,13.769Z"

@@ -24,7 +24,7 @@ function A4uStepBackwardCircle(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2,18A16,16,0,1,0,18,2,16,16,0,0,0,2,18Zm20-7a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V25a1,1,0,0,1-1,1H23a1,1,0,0,1-1-1ZM7.6,17.219,16.375,10.2A1,1,0,0,1,18,10.983V25.017a1,1,0,0,1-1.625.781L7.6,18.781A1,1,0,0,1,7.6,17.219Z"

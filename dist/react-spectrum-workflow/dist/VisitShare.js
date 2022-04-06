@@ -24,7 +24,7 @@ function A4uVisitShare(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M2,8H28v2.71l2,2.213V3a1,1,0,0,0-1-1H1A1,1,0,0,0,0,3V25a1,1,0,0,0,1,1H3.154A8.266,8.266,0,0,1,5.4,24H2Z"

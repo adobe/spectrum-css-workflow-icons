@@ -24,7 +24,7 @@ function A4uVisibility(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M24.613,8.58A14.972,14.972,0,0,0,18,6.937c-8.664,0-15.75,8.625-15.75,11.423,0,3,7.458,10.7,15.686,10.7,8.3,0,15.814-7.706,15.814-10.7C33.75,16,29.536,11.019,24.613,8.58ZM18,27.225A9.225,9.225,0,1,1,27.225,18,9.225,9.225,0,0,1,18,27.225Z"

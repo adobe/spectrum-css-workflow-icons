@@ -24,7 +24,7 @@ function A4uSpellcheck(_ref) {
   var props = _extends({}, _ref);
 
   return /*#__PURE__*/_react["default"].createElement("svg", _extends({
-    viewBox: "0 0 18 18"
+    viewBox: "0 0 36 36"
   }, props, props), /*#__PURE__*/_react["default"].createElement("path", {
     fillRule: "evenodd",
     d: "M33.614,11.344l-1.455-1.133a1,1,0,0,0-1.4.175L17.124,27.9,10.477,21.29a1,1,0,0,0-1.414,0L7.738,22.615a1,1,0,0,0,0,1.414l8.926,8.9a1,1,0,0,0,1.5-.093l15.629-20.09A1,1,0,0,0,33.614,11.344Z"
