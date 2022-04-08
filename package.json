@@ -4,7 +4,10 @@
   "scripts": {
     "build": "gulp",
     "build-icons": "gulp icons",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "reference-rsp-workflow": "backstop --config=vrt-rsp.js reference",
+    "test-rsp-workflow": "backstop --config=vrt-rsp.js test",
+    "approve-rsp-workflow": "backstop --config=vrt-rsp.js approve"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
@@ -49,9 +52,7 @@
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
     "@a4u/a4u-spectrum-open-source": "latest"
   },
-  "resolutions": {
-    "glob-parent": "^5.1.2",
-    "trim-newlines": "^4.0.1",
-    "nth-check": "^2.0.1"
+  "dependencies": {
+    "backstopjs-spectrum": "^6.12.1"
   }
 }
