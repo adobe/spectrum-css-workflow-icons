@@ -7,6 +7,15 @@ const ext = 'rsp';
 const selectors = readdirSync('./vrt-react/src/react-spectrum-workflow/dist').filter(item => !['index.js', 'util.js'].includes(item)).map(item => `.A4u${basename(item, '.js')}`);
 selectors.push('.icon-total-num-row');
 
+const [...rest] = process.argv.slice(3);
+
+let host = 'localhost';
+rest.forEach(argv => {
+  if (argv === '--moby') {
+    host = 'host.docker.internal';
+  }
+});
+
 module.exports = {
   id: 'rsp-icon-package',
   viewports: [
@@ -19,10 +28,11 @@ module.exports = {
   scenarios: [
     {
       label: 'icons',
-      url: 'http://localhost:3000',
+      url: `http://${host}:3000`,
       selectors,
       selectorExpansion: true,
       expect: 0,
+      delay: 1000,
       misMatchThreshold: 0.1,
       requireSameDimensions: true
     }
@@ -48,5 +58,5 @@ module.exports = {
     errorType: "movement"
   },
   fileNameTemplate: '{selectorLabel}',
-  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}'
 };

@@ -2,10 +2,6 @@
   "name": "vrt-react",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@adobe/react-spectrum-workflow": "^2.0.0",
-    "react-scripts": "5.0.0"
-  },
   "scripts": {
     "start": "rm -fr ./src/react-spectrum-workflow && cp -r ../dist/react-spectrum-workflow ./src/ && node code-gen && react-scripts start",
     "build": "rm -fr ./src/react-spectrum-workflow && cp -r ../dist/react-spectrum-workflow ./src/ && node code-gen && react-scripts build",
@@ -22,5 +18,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1"
   }
 }

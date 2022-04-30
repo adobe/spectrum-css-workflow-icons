@@ -7,7 +7,10 @@
     "clean": "gulp clean",
     "reference-rsp-workflow": "backstop --config=vrt-rsp.js reference",
     "test-rsp-workflow": "backstop --config=vrt-rsp.js test",
-    "approve-rsp-workflow": "backstop --config=vrt-rsp.js approve"
+    "approve-rsp-workflow": "backstop --config=vrt-rsp.js approve",
+    "docker-reference-rsp-workflow": "backstop --config=vrt-rsp.js --docker reference",
+    "docker-test-rsp-workflow": "backstop --config=vrt-rsp.js --docker test",
+    "docker-approve-rsp-workflow": "backstop --config=vrt-rsp.js --docker approve"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
@@ -26,6 +29,7 @@
     "@babel/register": "^7.17.0",
     "babel-plugin-add-header-comment": "^1.0.3",
     "babel-plugin-react-svg": "^3.0.3",
+    "backstopjs-spectrum": "^6.13.1",
     "del": "^6.0.0",
     "glob": "^7.2.0",
     "gulp": "^4.0.2",
@@ -51,8 +55,5 @@
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
     "@a4u/a4u-spectrum-open-source": "latest"
-  },
-  "dependencies": {
-    "backstopjs-spectrum": "^6.12.1"
   }
 }
