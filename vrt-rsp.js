@@ -48,7 +48,7 @@ module.exports = {
   engineOptions: {
     browser: 'chromium'
   },
-  asyncCaptureLimit: 1,
+  asyncCaptureLimit: 2,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
