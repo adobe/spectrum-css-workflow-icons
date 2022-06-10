@@ -13,7 +13,6 @@ const { task, series, parallel } = require('gulp');
 const del = require('del');
 
 require('./tasks/icons');
-require('./tasks/release');
 require('./tasks/site');
 require('./tasks/rsp');
 

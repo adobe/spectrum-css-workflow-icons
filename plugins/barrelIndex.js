@@ -1,5 +1,5 @@
 const through = require('through2');
-const { File } = require('gulp-util');
+const File = require('vinyl');
 const path = require('path');
 
 module.exports = () => {
@@ -19,7 +19,7 @@ module.exports = () => {
       this.push(file);
     }
 
-    const file = new File('utf8');
+    const file = new File();
     file.contents = Buffer.from(fileContent);
     file.path = 'index.js';
     this.push(file);

@@ -28,7 +28,6 @@ task('delete-icons', () =>
 
 task('clean-icons', () =>
   src('node_modules/@a4u/a4u-spectrum-open-source/assets/*/*.svg')
-    
     .pipe(replace(/class=\"fillPale\"/g, 'opacity="0.2"'))
     .pipe(replace(/class=\"fillMedium\"/g, 'opacity="0.5"'))
     .pipe(svgmin({
@@ -101,27 +100,6 @@ task('clean-icons-color', () =>
     .pipe(dest('icons/spectrum-css/workflow/color/24/'))
 );
 
-task('generate-opensource-iconlist',
-  () => src('node_modules/@a4u/a4u-collection-react-spectrum-open-source-release/**/*.svg')
-    .pipe(rename(function (filePath) {
-      filePath.basename = filePath.basename.replace(/S_(.*?)_.*/, '$1');
-    }))
-    .pipe(iconList('opensource_icons.json'))
-    .pipe(dest('temp/'))
-);
-
-task('generate-iconlist-18', () =>
-  src('icons/spectrum-css/workflow/18/*.svg')
-    .pipe(iconList('icons_18.json'))
-    .pipe(dest('temp/'))
-);
-
-task('generate-iconlist-24', () =>
-  src('icons/spectrum-css/workflow/24/*.svg')
-    .pipe(iconList('icons_24.json'))
-    .pipe(dest('temp/'))
-);
-
 task('generate-iconlist-color', () =>
   src('icons/spectrum-css/workflow/color/24/*.svg')
     .pipe(iconList('icons-color.json'))
@@ -131,13 +109,6 @@ task('generate-iconlist-color', () =>
 task('generate-iconlist', () =>
   src('icons/spectrum-css/workflow/18/*.svg')
     .pipe(iconList('icons.json'))
-    .pipe(dest('icons/spectrum-css/workflow/'))
-);
-
-// Ensure that the required sizes are provided for all icons -- excludes color since there's only one size
-task('check-icons', () =>
-  src('temp/icons_*.json')
-    .pipe(identical('icons.json'))
     .pipe(dest('icons/spectrum-css/workflow/'))
 );
 
@@ -160,22 +131,6 @@ function generateSVGSprite(sources, filename) {
     .pipe(dest('icons/spectrum-css/workflow/'));
 }
 
-task('filter-icons', () => {
-  const openSourceIcons = JSON.parse(fs.readFileSync('./temp/opensource_icons.json'));
-  const availableIcons = JSON.parse(fs.readFileSync('./icons/spectrum-css/workflow/icons.json'));
-
-  const toBeRemovedIcons = availableIcons.filter(i => !openSourceIcons.includes(i)).map(i => `./icons/spectrum-css/workflow/**/${i}`);
-  return del(toBeRemovedIcons);
-});
-
-task('replace-iconlist', () =>
-  src('./temp/opensource_icons.json')
-    .pipe(rename(function (filePath) {
-      filePath.basename = 'icons';
-    }))
-    .pipe(dest('icons/spectrum-css/workflow/'))
-);
-
 task('generate-svgsprite', () =>
   generateSVGSprite([
     'icons/spectrum-css/workflow/**/*.svg',
@@ -195,14 +150,6 @@ task('workflow-icons-color', series(
 
 task('workflow-icons-monochrome', series(
   'clean-icons',
-  // parallel(
-  //   'generate-iconlist-18',
-  //   'generate-iconlist-24',
-  //   'generate-opensource-iconlist'
-  // ),
-  // 'check-icons',
-  // 'filter-icons',
-  // 'replace-iconlist',
   'generate-iconlist',
   'generate-svgsprite'
 ));
