@@ -15,15 +15,11 @@ const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const replace = require('gulp-replace');
 const del = require('del');
-const identical = require('../plugins/identical');
 const iconList = require('../plugins/iconList');
 const fs = require('fs');
 
 task('delete-icons', () =>
-  del([
-    'temp',
-    'icons'
-  ])
+  del(['icons'])
 );
 
 task('clean-icons', () =>
@@ -39,9 +35,9 @@ task('clean-icons', () =>
         'removeEmptyContainers',
         'removeTitle',
 
-        {  
+        {
           name: 'preset-default',
-          
+
           params: {
             overrides: {
               removeViewBox: false,
@@ -57,8 +53,8 @@ task('clean-icons', () =>
               'id',
               '*:fill:((?!^none$).)*'
             ]
-          } 
-        } 
+          }
+        }
       ]
     }))
 
