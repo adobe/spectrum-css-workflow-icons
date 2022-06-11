@@ -34,10 +34,8 @@ task('clean-icons', () =>
         'removeStyleElement',
         'removeEmptyContainers',
         'removeTitle',
-
         {
           name: 'preset-default',
-
           params: {
             overrides: {
               removeViewBox: false,
@@ -57,7 +55,6 @@ task('clean-icons', () =>
         }
       ]
     }))
-
     .pipe(rename(function (filePath) {
       filePath.basename = filePath.basename.replace(/S_(.*?)_.*/, '$1');
       filePath.dirname = filePath.dirname.split('_').pop();
@@ -96,10 +93,57 @@ task('clean-icons-color', () =>
     .pipe(dest('icons/spectrum-css/workflow/color/24/'))
 );
 
+task('clean-icons-express', () =>
+  src('node_modules/@a4u/a4u-spectrum-express-open-source/assets/*/*.svg')
+    .pipe(replace(/class=\"fillPale\"/g, 'opacity="0.2"'))
+    .pipe(replace(/class=\"fillMedium\"/g, 'opacity="0.5"'))
+    .pipe(svgmin({
+      full: true,
+      plugins: [
+        'inlineStyles',
+        'convertStyleToAttrs',
+        'removeStyleElement',
+        'removeEmptyContainers',
+        'removeTitle',
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              removeViewBox: false,
+            }
+          }
+        },
+        {
+          name: 'removeAttrs',
+          params: {
+            attrs: [
+              'class',
+              'data-name',
+              'id',
+              '*:fill:((?!^none$).)*'
+            ]
+          }
+        }
+      ]
+    }))
+    .pipe(rename(function (filePath) {
+      const [_, basename, size] = filePath.basename.split('_');
+      filePath.basename = basename;
+      filePath.dirname = size;
+    }))
+    .pipe(dest('icons/spectrum-css-express/workflow'))
+);
+
 task('generate-iconlist-color', () =>
   src('icons/spectrum-css/workflow/color/24/*.svg')
     .pipe(iconList('icons-color.json'))
     .pipe(dest('icons/spectrum-css/workflow/'))
+);
+
+task('generate-iconlist-express', () =>
+  src('icons/spectrum-css-express/workflow/18/*.svg')
+    .pipe(iconList('icons.json'))
+    .pipe(dest('icons/spectrum-css-express/workflow/'))
 );
 
 task('generate-iconlist', () =>
@@ -108,7 +152,7 @@ task('generate-iconlist', () =>
     .pipe(dest('icons/spectrum-css/workflow/'))
 );
 
-function generateSVGSprite(sources, filename) {
+function generateSVGSprite(sources, filename, destination) {
   return src(sources)
     .pipe(rename(function (path) {
       const name = path.dirname.split(path.sep);
@@ -124,18 +168,24 @@ function generateSVGSprite(sources, filename) {
       inlineSvg: true
     }))
     .pipe(rename(filename))
-    .pipe(dest('icons/spectrum-css/workflow/'));
+    .pipe(dest(destination));
 }
 
 task('generate-svgsprite', () =>
   generateSVGSprite([
     'icons/spectrum-css/workflow/**/*.svg',
     '!icons/spectrum-css/workflow/color/**/*'
-  ], 'spectrum-icons.svg')
+  ], 'spectrum-icons.svg', 'icons/spectrum-css/workflow/')
 );
 
 task('generate-svgsprite-color', () =>
-  generateSVGSprite('icons/spectrum-css/workflow/color/**/*.svg', 'spectrum-icons-color.svg')
+  generateSVGSprite('icons/spectrum-css/workflow/color/**/*.svg', 'spectrum-icons-color.svg', 'icons/spectrum-css/workflow/')
+);
+
+task('generate-svgsprite-express', () =>
+  generateSVGSprite([
+    'icons/spectrum-css-express/workflow/**/*.svg',
+  ], 'spectrum-express-icons.svg', 'icons/spectrum-css-express/workflow/')
 );
 
 task('workflow-icons-color', series(
@@ -150,9 +200,16 @@ task('workflow-icons-monochrome', series(
   'generate-svgsprite'
 ));
 
+task('workflow-icons-express', series(
+  'clean-icons-express',
+  'generate-iconlist-express',
+  'generate-svgsprite-express'
+));
+
 task('workflow-icons', parallel(
   'workflow-icons-monochrome',
-  'workflow-icons-color'
+  'workflow-icons-color',
+  'workflow-icons-express'
 ));
 
 task('icons', series(

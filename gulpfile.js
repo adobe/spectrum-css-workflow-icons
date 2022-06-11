@@ -20,8 +20,18 @@ task('clean', () =>
   del('dist')
 );
 
-task('build', series(
-  'clean',
+task('build-spectrum-css-express-workflow', series(
+  parallel(
+    'copy-express-svg-files',
+    'copy-express-sites-files',
+    'copy-express-loadIcons',
+    'copy-express-spectrum-css'
+  ),
+  'build-express-svg-css',
+  'generate-svg-express-examples',
+));
+
+task('build-spectrum-css-workflow', series(
   parallel(
     'copy-svg-files',
     'copy-sites-files',
@@ -31,7 +41,18 @@ task('build', series(
   'build-svg-css',
   'generate-svg-examples',
   'generate-svg-color-examples',
+));
+
+task('build-rsp-worklfow', series(
   'babel-transpile-rsp'
+));
+
+task('build', series(
+  'clean',
+  'icons',
+  'build-rsp-worklfow',
+  'build-spectrum-css-express-workflow',
+  'build-spectrum-css-workflow'
 ));
 
 task('default', series('build'));
