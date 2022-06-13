@@ -19,7 +19,7 @@ jobs:
       run: cp package-css-ccx-publish.json ./dist/spectrum-css-ccx-workflow-icons/package.json && cp COPYRIGHT CODE_OF_CONDUCT.md LICENSE README.md dist/spectrum-css-ccx-workflow-icons/
     - name: Publish @adobe/spectrum-css-ccx-workflow-icons package
       working-directory: ./dist/spectrum-css-ccx-workflow-icons/
-      run: npm publish
+      run: npm publish --access public
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
