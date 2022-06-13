@@ -120,7 +120,7 @@ task('clean-icons-express', () =>
               'class',
               'data-name',
               'id',
-              '*:fill:((?!^none$).)*'
+              // '*:fill:((?!^none$).)*'
             ]
           }
         }
