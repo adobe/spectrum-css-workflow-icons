@@ -15,6 +15,7 @@ const del = require('del');
 require('./tasks/icons');
 require('./tasks/site');
 require('./tasks/rsp');
+require('./tasks/release');
 
 task('clean', () =>
   del('dist')
@@ -29,6 +30,7 @@ task('build-spectrum-css-express-workflow', series(
   ),
   'build-express-svg-css',
   'generate-svg-express-examples',
+  'prepare-spectrum-css-ccx-workflow'
 ));
 
 task('build-spectrum-css-workflow', series(
@@ -41,10 +43,12 @@ task('build-spectrum-css-workflow', series(
   'build-svg-css',
   'generate-svg-examples',
   'generate-svg-color-examples',
+  'prepare-spectrum-css-workflow'
 ));
 
 task('build-rsp-worklfow', series(
-  'babel-transpile-rsp'
+  'babel-transpile-rsp',
+  'prepare-rsp-workflow'
 ));
 
 task('build', series(
@@ -56,4 +60,3 @@ task('build', series(
 ));
 
 task('default', series('build'));
-
