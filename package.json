@@ -50,7 +50,7 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release": "latest",
-    "@a4u/a4u-spectrum-express-open-source": "^4.0.0",
-    "@a4u/a4u-spectrum-open-source": "latest"
+    "@a4u/a4u-spectrum-express-open-source": "^5.0.0",
+    "@a4u/a4u-spectrum-open-source": "^6.0.2"
   }
 }
