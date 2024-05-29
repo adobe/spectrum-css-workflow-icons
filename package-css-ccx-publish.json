@@ -1,9 +1,0 @@
-{
-  "name": "@adobe/spectrum-css-ccx-workflow-icons",
-  "version": "2.0.0",
-  "main": "dist/icons.json",
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css-workflow-icons/issues"
-  },
-  "license": "Apache-2.0"
-}

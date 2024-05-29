@@ -1,0 +1,115 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+{% set supportedProperties = { 'iconPrimary': '#22222', 'iconRedPrimary': '#d31510' } %}
+{% if metadata.spritesheet %}
+  {% set supportedProperties = { 'iconFill': '#22222', 'iconRedPrimary': '#d31510' } %}
+{% endif %}
+
+{% js %}
+window.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search');
+  const iconTable = document.getElementById('icons-table');
+  const textField = document.querySelectorAll('sp-textfield');
+  const resetButton = document.getElementById('reset');
+
+  const updateIcons = () => {
+    const searchValue = searchInput.value.toLowerCase();
+    iconTable.querySelectorAll('sp-table-row').forEach((row) => {
+      const icon = row.querySelector('sp-table-cell').textContent.toLowerCase();
+      row.style.display = icon.search(searchValue) === -1 ? 'none' : '';
+    });
+
+    const matchingIconCount = iconTable.querySelectorAll('sp-table-row:not([style="display: none;"])').length;
+    const totalIconCount = iconTable.querySelectorAll('sp-table-row').length;
+
+    const helpText = searchInput.querySelector('sp-help-text');
+    helpText.textContent = matchingIconCount > 0 ? `Showing ${matchingIconCount} of ${totalIconCount} available icons.` : `No icons found for "${searchValue}".`;
+  };
+
+  if (searchInput) searchInput.addEventListener('input', updateIcons);
+  if (iconTable) updateIcons();
+
+
+  if (textField) {
+    textField.forEach((field) => {
+      const customColorStyles = document.createElement('style');
+      customColorStyles.textContent = `
+        input[type="color"] {
+          block-size: calc(var(--spectrum-textfield-height) / 1.5);
+        }
+
+        input[type="color"],
+        input[type="color"]::-webkit-color-swatch-wrapper {
+          padding: 0;
+        }
+
+        input[type="color"]::-webkit-color-swatch {
+          border: 0 solid transparent;
+          border-radius: var(--spectrum-textfield-corner-radius);
+        }
+      `;
+      field.shadowRoot.appendChild(customColorStyles);
+
+      field.updated = (changedProperties) => {
+        if (changedProperties.has('type') && changedProperties.get('type') === 'color') {
+          field.renderRoot.querySelector('input').type = 'color';
+        }
+      }
+
+      field.type = 'color';
+
+      field.addEventListener('change', (evt) => {
+        iconTable.style.setProperty(`--${field.id}`, evt.target.value);
+      });
+    });
+  }
+
+  if (resetButton) {
+    resetButton.addEventListener('click', () => {
+      textField.forEach((field) => {
+        field.value = field.getAttribute('value');
+        iconTable.style.removeProperty(`--${field.id}`);
+      });
+
+      searchInput.value = '';
+
+      if (iconTable) updateIcons();
+    });
+  }
+});
+{% endjs %}
+
+<div id="icon-table-filters">
+  <div>
+      <sp-field-label size="XL" for="search">Search available icons:</sp-field-label>
+      <sp-search id="search" label="Search for icons" autocomplete="off">
+          <sp-help-text slot="help-text"></sp-help-text>
+      </sp-search>
+  </div>
+
+  <div>
+    <sp-field-label size="XL" for="color-sets">Override color properties:</sp-field-label>
+    <sp-field-group horizontal id="color-sets">
+      {% for prop, color in supportedProperties %}
+      <sp-field-group horizontal>
+        <sp-field-label size="L" for="{{ prop }}"><code>--{{ prop }}</code>:</sp-field-label>
+        <sp-textfield size="L" id="{{ prop }}" type="color"{% if color %} value="{{ color }}"{% endif %}></sp-textfield>
+      </sp-field-group>
+      {% endfor %}
+    </sp-field-group>
+  </div>
+
+  <div class="filter-container">
+    <sp-button variant="secondary" quiet id="reset">
+      <sp-icon-refresh slot="icon"></sp-icon-refresh>Reset
+    </sp-button>
+  </div>
+</div>
+
+{% set icons = metadata.icons %}
+{% include "icon-table.njk" %}

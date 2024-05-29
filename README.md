@@ -1,65 +1,76 @@
-# Spectrum-CSS Workflow Icons 
+<div align="right">
+
+[![Netlify](https://api.netlify.com/api/v1/badges/22568c1e-135b-4cc4-a682-387cbad68a5d/deploy-status)](https://app.netlify.com/sites/spectrum-workflow-icons/deploys)
+
+![GitHub Actions build status on main](https://img.shields.io/github/actions/workflow/status/adobe/spectrum-css-workflow-icons/build.yml?branch=main&style=for-the-badge&label=main)
+
+</div>
+
+<h1 align="center">Spectrum Workflow Icons</h1>
 
 Build and publish spectrum-css workflow svg icons and svg sprite sheet for [Spectrum CSS](https://github.com/adobe/spectrum-css).
 
-### Setup
+## Setup
 
-```
+```sh
 yarn install
-yarn install -g http-server
 ```
 
-### For external user
+### To build and preview the icons
 
-Run `yarn run build` will generate the ready to publish package in `dist/`.
+Run `yarn build` will generate the ready to publish package in `dist/`.
 
-Run `http-server dist/ -o` to see the mini-site for all the workflow icons.
+Run `yarn serve` to see the mini-site for all the workflow icons.
 
-### For adobe user
+### Updating the icons
 
-1. Make sure connect to corp network.
-2. Run `yarn add @a4u/a4u-collection-react-spectrum-open-source-release` and `yarn add @a4u/a4u-collection-spectrum-css-release` to update the icon set from Adobe corp artifactory.
-3. Run `yarn run build-icons` to rebuild the `icons/` folder.
-4. Run `yarn run build` to generate the ready to publish package in `dist/`
-5. Preview the icons with `http-server dist/ -o`
+Icons are available from an internal repository that is available only to Adobe employees. If you are an employee with access, follow the steps below:
+
+1. `yarn npm login --scope a4u` to authenticate with the internal repository
+2. `yarn add -D @a4u/a4u-s2-icon-global-set-open-source-processed` to install the latest version of the internal repository
+3. **Do not commit** the updated `package.json` with the new version of `@a4u/a4u-s2-icon-global-set-open-source-processed` as this blocks non-Adobe employees from installing and using the repository.
+
+Once your environment is ready, you can run `yarn build` to rebuild the `icons/` folder. Expect to see changes to the committed content in the `icons/` folder.
+
+To preview your updates, run `yarn serve`.
 
 ### CSS Custom Properties
 
-We will be moving to include [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) as fill attributes in icons.
+Icons include [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) as fill attributes.
 
 Example:
-```svg
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-  <path d="M9 1.889A7.111 7.111 0 1 0 16.111 9 7.111 7.111 0 0 0 9 1.889zM14.333 9a5.308 5.308 0 0 1-.986 3.09L5.91 4.653A5.333 5.333 0 0 1 14.334 9h-.001zM3.666 9a5.309 5.309 0 0 1 .986-3.09l7.437 7.438A5.333 5.333 0 0 1 3.667 9h-.001z" fill="var(--iconFill, #fff)"/>
-  <path d="M9 1.889A7.111 7.111 0 1 0 9 16.11 7.111 7.111 0 0 0 9 1.89m4.347 10.201L5.91 4.653a5.333 5.333 0 0 1 7.437 7.437M9 14.334A5.333 5.333 0 0 1 4.653 5.91l7.437 7.438a5.33 5.33 0 0 1-3.09.986M9 .89c4.472 0 8.111 3.639 8.111 8.111S13.472 17.111 9 17.111.889 13.472.889 9 4.528.889 9 .889zm4.095 9.535c.158-.453.24-.932.238-1.422 0-1.63-.899-3.106-2.346-3.853a4.351 4.351 0 0 0-3.41-.243l5.518 5.518zm-2.672 2.67L4.905 7.577a4.298 4.298 0 0 0-.238 1.422c0 1.63.898 3.106 2.346 3.853a4.351 4.351 0 0 0 3.41.244z" fill="var(--iconBorder, #010101)" opacity=".51"/>
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path d="m16.87598,4.84082h-.00098l-5.74902-3.31934c-.69629-.40234-1.55859-.40137-2.25098,0l-5.75098,3.31934c-.69336.40137-1.12402,1.14844-1.12402,1.94922v6.63965c0,.80176.43164,1.54785,1.125,1.94824l5.74902,3.32031c.34766.20117.7373.30078,1.12598.30078.38965,0,.77832-.09961,1.125-.30078l5.75-3.32031c.69336-.40039,1.125-1.14648,1.125-1.94824v-6.63965c0-.80078-.43066-1.54785-1.12402-1.94922Zm-7.25-2.02051c.11523-.06738.24414-.10059.37402-.10059.12891,0,.25879.0332.375.10059l5.28516,3.05151-5.65942,3.12231-5.66431-3.12085,5.28955-3.05298ZM3.875,14.0791c-.23145-.13379-.375-.38281-.375-.64941v-6.30371l5.75,3.16797v6.88892l-5.375-3.10376Zm12.25,0l-5.375,3.10327v-6.8894l5.75-3.17236v6.30908c0,.2666-.14355.51562-.375.64941Z" fill="var(--iconPrimary, #222)"/>
 </svg>
 ```
 
-Although not all icons are currently using this properties, we'll be migrating more to use them. Here is the list of planned properties names:
+Here is the list of properties available:
 
-* `iconCutout`
-* `iconBackground`
-* `iconFillStrong`
-* `iconFill`
-* `iconFillMedium`
-* `iconFillPale`
-* `iconFillLight`
-* `iconBlue`
-* `iconGreen`
-* `iconRed`
-* `iconOrange`
-* `iconPurple`
-* `iconIndigo`
-* `iconCelery`
-* `iconMagenta`
-* `iconYellow`
-* `iconFuchsia`
-* `iconSeafoam`
-* `iconChartreuse`
+| Property name | Fallback value | Additional context |
+| --- | --- | --- |
+| `--iconPrimary` | `currentColor` | Most workflow icons |
+| `--iconRedPrimary` | #d31510 | Used in: `CloudStateErrorRed_22x20.svg` |
+| `--iconFill` | #464646 | Express only |
+| `--iconFillMedium` | #909090 | Express only |
+
+## Tasks
+
+The following tasks are available:
+
+| Command | Description | Examples |
+| --- | --- | --- |
+| `clean` | Cleans all output files in the dist directory | `yarn clean` |
+| `build` | Deletes and rebuilds the icon folder, can only be run by an Adobe employee with access | `yarn build` |
+| `site` | Cleans the dist directory, copies website assets and prepares the dist output for the site preview | `yarn site` |
+| `serve` | Builds the site and opens a localhost of the preview website to view the workflow icons | `yarn serve` |
 
 ### Contributing
 
-Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING.md) for more information.
+A very special thank you to all of our [contributors](https://github.com/adobe/spectrum-css/graphs/contributors) without whom this project would not be possible.
+
+Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUTING.md) to get started.
 
 ### Licensing
 

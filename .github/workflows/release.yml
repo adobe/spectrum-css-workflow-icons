@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+    contents: read
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        always-auth: true
+        node-version: 20
+        cache: yarn
+        registry-url: 'https://registry.npmjs.org'
+        scope: '@adobe'
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install --frozen-lockfile
+
+    - name: Create release pull request or publish to npm
+      id: changesets
+      uses: changesets/action@v1
+      with:
+        # This expects you to have a script called release which does a build for your packages and calls changeset publish
+        title: "chore: release"
+        commit: "chore: release"
+        publish: yarn release
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}

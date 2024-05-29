@@ -1,0 +1,126 @@
+name: Verify
+    # -------------------------------------------------------------
+    # This workflow will build and verify pull requests. It will:
+    # - Build the base branch and the PR branch
+    # - Compare the compiled output of the two branches
+    # - Run visual regression tests on the PR branch
+    # - Publish the PR branch for review
+    # -------------------------------------------------------------
+
+on:
+    merge_group:
+    workflow_dispatch:
+    pull_request:
+        branches:
+            - main
+
+        types:
+            - opened
+            - synchronize
+            - reopened
+            - auto_merge_enabled
+
+permissions:
+    contents: read
+    pull-requests: write
+    pages: write
+    id-token: write
+
+concurrency:
+    group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+    cancel-in-progress: true
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    # -------------------------------------------------------------
+    # Validate build for various environments
+    # -------------------------------------------------------------
+    verify_builds:
+        name: Verify build
+        # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
+        if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+        strategy:
+            fail-fast: false
+            matrix:
+                system:
+                    - macos-latest
+                    - ubuntu-latest
+                    - windows-latest
+                node-version:
+                    - 20
+        runs-on: ${{ matrix.system }}
+        timeout-minutes: 4
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                node-version: ${{ matrix.node-version }}
+                cache: yarn
+
+            ## --- INSTALL --- ##
+            # If statement isn't needed here b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile
+
+            # This step will evaluate the repo status and report the change
+            # If there are changes, capture the changes and upload them as an artifact
+            - name: Check if there are changes
+              shell: bash
+              run: |
+                if [[ -z $(git status --porcelain) ]]; then
+                    echo "No changes detected"
+                    exit 0
+                else
+                    echo "Changes detected"
+                    git status
+                    git add .
+                    git diff > changes.diff
+                    exit 1
+                fi
+
+    # -------------------------------------------------------------
+    # PUBLISH PR PREVIEW --- #
+    # -------------------------------------------------------------
+    publish_site:
+        name: Publish preview
+        if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                cache: yarn
+
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile
+
+            - name: Build site
+              shell: bash
+              run: yarn site
+
+            ## --- DEPLOY WEBSITE TO NETLIFY --- ##
+            - name: Deploy
+              uses: nwtgck/actions-netlify@v3
+              with:
+                  publish-dir: dist
+                  production-branch: main
+                  production-deploy: false
+                  netlify-config-path: ./netlify.toml
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: ${{ github.event.pull_request.title }}
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              timeout-minutes: 10
