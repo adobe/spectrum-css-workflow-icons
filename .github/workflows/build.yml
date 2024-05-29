@@ -10,21 +10,17 @@ name: Verify
 on:
     merge_group:
     workflow_dispatch:
+    push:
+        branches:
+            - main
     pull_request:
         branches:
             - main
-
         types:
             - opened
             - synchronize
             - reopened
             - auto_merge_enabled
-
-permissions:
-    contents: read
-    pull-requests: write
-    pages: write
-    id-token: write
 
 concurrency:
     group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
@@ -84,43 +80,3 @@ jobs:
                     git diff > changes.diff
                     exit 1
                 fi
-
-    # -------------------------------------------------------------
-    # PUBLISH PR PREVIEW --- #
-    # -------------------------------------------------------------
-    publish_site:
-        name: Publish preview
-        if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
-        runs-on: ubuntu-latest
-        steps:
-            - name: Check out code
-              uses: actions/checkout@v4
-
-            - name: Use Node LTS version
-              uses: actions/setup-node@v4
-              with:
-                node-version: 20
-                cache: yarn
-
-            - name: Install dependencies
-              shell: bash
-              run: yarn install --frozen-lockfile
-
-            - name: Build site
-              shell: bash
-              run: yarn site
-
-            ## --- DEPLOY WEBSITE TO NETLIFY --- ##
-            - name: Deploy
-              uses: nwtgck/actions-netlify@v3
-              with:
-                  publish-dir: dist
-                  production-branch: main
-                  production-deploy: false
-                  netlify-config-path: ./netlify.toml
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  deploy-message: ${{ github.event.pull_request.title }}
-              env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-              timeout-minutes: 10

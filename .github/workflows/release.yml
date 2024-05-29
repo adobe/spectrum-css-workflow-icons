@@ -5,8 +5,11 @@ on:
     branches:
       - main
 
-permissions:
-    contents: read
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+defaults:
+  run:
+      shell: bash
 
 jobs:
   release:
@@ -26,18 +29,15 @@ jobs:
         scope: '@adobe'
 
     - name: Install dependencies
-      shell: bash
       run: yarn install --frozen-lockfile
 
     - name: Create release pull request or publish to npm
       id: changesets
       uses: changesets/action@v1
       with:
-        # This expects you to have a script called release which does a build for your packages and calls changeset publish
         title: "chore: release"
         commit: "chore: release"
         publish: yarn release
-
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}

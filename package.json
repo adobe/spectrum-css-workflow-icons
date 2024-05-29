@@ -19,7 +19,7 @@
     "site": "eleventy",
     "clean": "rimraf dist _site",
     "serve": "eleventy --serve",
-    "release": "yarn build && changeset publish"
+    "release": "yarn clean && yarn build && changeset publish"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.10",
@@ -47,14 +47,6 @@
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "rollup": "^4.17.2"
-  },
-  "peerDependencies": {
-    "@a4u/a4u-s2-icon-global-set-open-source-processed": "2.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@a4u/a4u-s2-icon-global-set-open-source-processed": {
-      "optional": true
-    }
   },
   "engines": {
     "node": ">=20"
