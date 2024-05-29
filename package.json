@@ -19,7 +19,7 @@
     "site": "eleventy",
     "clean": "rimraf dist _site",
     "serve": "eleventy --serve",
-    "release": "yarn build && changeset publish"
+    "release": "yarn clean && yarn build && changeset publish"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.10",
