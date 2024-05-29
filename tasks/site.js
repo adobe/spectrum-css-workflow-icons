@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,101 +9,66 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const { task, src, dest } = require('gulp');
-const rename = require('gulp-rename');
-const stylus = require('gulp-stylus');
-const template = require('gulp-template');
-const fs = require('fs');
 
-task('copy-svg-files', () =>
-  src('icons/spectrum-css/workflow/**')
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist'))
-);
+const fs = require("fs");
+const fsp = fs.promises;
+const path = require("path");
 
-task('copy-sites-files', () =>
-  src([
-    'sites/shared/**/*',
-    'sites/svg/**/*'
-  ])
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist/sites'))
-);
+const _ = require('lodash');
+const { rimraf } = require('rimraf');
 
-task('copy-loadIcons', () =>
-  src('node_modules/loadicons/index.js')
-    .pipe(rename('loadIcons.js'))
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist/sites/lib/'))
-);
+const { rootPath, copyFromSource, index } = require('./utilities');
 
-task('copy-spectrum-css', () =>
-  src([
-    'node_modules/@adobe/spectrum-css/dist/*.css',
-    'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'
-  ])
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist/sites/spectrum-css/'))
-);
+/**
+ * @description Generate HTML page from template using lodash
+ * @returns {Promise<void>}
+ */
+async function build({ verbose = false } = {}) {
+  const outputPath = path.join(rootPath, 'dist');
+  const templatePath = path.join(rootPath, 'sites/index.html');
 
-task('build-svg-css', () =>
-  src('dist/spectrum-css-workflow-icons/dist/sites/spectrum-icons.styl')
-    .pipe(stylus())
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist/sites/'))
-);
+  const templateContent = fs.readFileSync(templatePath, 'utf8');
+  const html = _.template(templateContent)?.({
+    title: 'Workflow icons',
+    svgsprite: 'assets/svg-spriteSheet/icons.svg',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    manifest: JSON.parse(fs.readFileSync('dist/manifest.json', 'utf8')),
+  });
+  return fsp.writeFile(path.join(outputPath, 'index.html'), html, 'utf8');
+}
 
-task('generate-svg-examples', () =>
-  src('sites/svg/index.html')
-    .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-css-workflow-icons/dist/spectrum-icons.svg', 'utf8'),
-      icons: JSON.parse(fs.readFileSync('dist/spectrum-css-workflow-icons/dist/icons.json', 'utf8'))
-    }))
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist'))
-);
+exports.default = async function main({
+    clean = true,
+    verbose = false,
+  } = {}) {
+    if (clean) {
+      process.stdout.write('🧹 Cleaning site directories...\n\n');
+      await rimraf(['dist'], {
+        cwd: rootPath,
+        ignore: ['components', 'react', 'svg', 'manifest.json', 'svg-spriteSheet']
+      });
+    }
 
-task('generate-svg-color-examples', () =>
-  src('sites/svg/color.html')
-    .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-css-workflow-icons/dist/spectrum-icons-color.svg', 'utf8'),
-      icons: JSON.parse(fs.readFileSync('dist/spectrum-css-workflow-icons/dist/icons-color.json', 'utf8'))
-    }))
-    .pipe(dest('dist/spectrum-css-workflow-icons/dist'))
-);
+    // Ensure directories exist
+    await Promise.all([
+        fsp.mkdir('src', { recursive: true }),
+    ]);
 
-task('copy-express-svg-files', () =>
-  src('icons/spectrum-css-express/workflow/**')
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist'))
-);
+    // Copy assets
+    await Promise.all([
+        copyFromSource('icons/', 'dist', { verbose }),
+        copyFromSource('node_modules/loadicons/', 'dist/node_modules/loadicons', { verbose, glob: ['index.js']}),
+        copyFromSource('node_modules/@spectrum-css/', 'dist/node_modules/@spectrum-css', { verbose }),
+        copyFromSource('sites/', 'dist', { glob: ['*.css'], verbose }),
+    ]);
 
-task('copy-express-sites-files', () =>
-  src([
-    'sites/shared/**/*',
-    'sites/svg/**/*'
-  ])
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist/sites'))
-);
+    await Promise.all([
+      index("dist/assets/components/*.js", "dist/assets/components/index.js"),
+      index("dist/assets/react/*.js", "dist/assets/react/index.js"),
+    ]);
 
-task('copy-express-loadIcons', () =>
-  src('node_modules/loadicons/index.js')
-    .pipe(rename('loadIcons.js'))
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist/sites/lib/'))
-);
-
-task('copy-express-spectrum-css', () =>
-  src([
-    'node_modules/@adobe/spectrum-css/dist/*.css',
-    'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'
-  ])
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist/sites/spectrum-css/'))
-);
-
-task('build-express-svg-css', () =>
-  src('dist/spectrum-css-ccx-workflow-icons/dist/sites/spectrum-icons.styl')
-    .pipe(stylus())
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist/sites/'))
-);
-
-task('generate-svg-express-examples', () =>
-  src('sites/svg/express.html')
-    .pipe(template({
-      svgsprite: fs.readFileSync('dist/spectrum-css-ccx-workflow-icons/dist/spectrum-express-icons.svg', 'utf8'),
-      icons: JSON.parse(fs.readFileSync('dist/spectrum-css-ccx-workflow-icons/dist/icons.json', 'utf8'))
-    }))
-    .pipe(dest('dist/spectrum-css-ccx-workflow-icons/dist'))
-);
+    return build({ verbose }).then(() => Promise.all([
+    ])).then(() => {
+        process.stdout.write('✅ Success: ready to preview\n\n');
+    });
+  }

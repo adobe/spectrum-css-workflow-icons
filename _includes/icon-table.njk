@@ -1,0 +1,85 @@
+{% js %}
+window.addEventListener('DOMContentLoaded', () => {
+    const toast = document.querySelector('#notification-toast');
+    const icons = [...document.querySelectorAll(".spectrum-Icon")];
+
+    let toastTimeout;
+    const showToast = ({
+    message = 'Markup copied to clipboard!',
+    type = 'positive',
+    } = {}) => {
+    toast.setAttribute('variant', type);
+    toast.innerHTML = message;
+    toast.open = true;
+
+    requestAnimationFrame(function() {
+        clearTimeout(toastTimeout);
+
+        toastTimeout = setTimeout(function() {
+        toast.open = false;
+        }, 2000);
+    });
+    };
+
+    if (icons && icons.length > 0) icons.forEach(i => {
+    i.addEventListener('click', async (event) => {
+        const icon = event.target.outerHTML;
+        if (!icon) {
+        showToast({
+            message: 'Could not identify the icon code.',
+            variant: 'negative'
+        });
+        return;
+        }
+
+        let iconMarkup = icon.replace(/^ +/gm, '');
+        let svgPaths;
+
+        const uniqueId = event.target?.querySelector('use')?.getAttribute('xlink:href');
+
+        if (window.spriteContent && uniqueId) {
+        const iconPath = window.spriteContent.querySelector(uniqueId);
+        if (iconPath) svgPaths = iconPath.innerHTML;
+        }
+
+        // If the svgPaths are found, replace the use with the svgPaths data
+        if (svgPaths) {
+        iconMarkup = iconMarkup.replace(/<use.*><\/use>/, svgPaths);
+        }
+
+        try {
+        await navigator.clipboard.writeText(iconMarkup);
+        showToast();
+        } catch (error) {
+        showToast({
+            message: 'Could not copy code to clipboard: ' + error.message,
+            variant: 'negative'
+        });
+        }
+    });
+    });
+});
+{% endjs %}
+
+<sp-table id="icons-table" scroller="true">
+    <sp-table-head>
+        <sp-table-head-cell>Icon</sp-table-head-cell>
+        {% for size in metadata.sizes %}
+        <sp-table-head-cell>{{ size }}</sp-table-head-cell>
+        {% endfor %}
+    </sp-table-head>
+    <sp-table-body>
+    {% for icon in icons %}
+        <sp-table-row value="{{ icon | filenameToSpriteId }}">
+        <sp-table-cell>{{ icon | readableString }}</sp-table-cell>
+        {% for size in metadata.sizes %}
+        <sp-table-cell style="display: flex; align-items: center;">
+            <svg class="spectrum-Icon spectrum-Icon--size{{ size }}" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false" aria-label="{{ icon | readableString }}">
+            <use xlink:href="#{{ icon | filenameToSpriteId }}" />
+            </svg>
+        </sp-table-cell>
+        {% endfor %}
+        </sp-table-row>
+    {% endfor %}
+    </sp-table-body>
+</sp-table>
