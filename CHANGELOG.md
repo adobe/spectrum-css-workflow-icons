@@ -1,5 +1,13 @@
 # @adobe/spectrum-css-workflow-icons
 
+## 4.0.0
+
+### Major Changes
+
+-   [#40](https://github.com/adobe/spectrum-css-workflow-icons/pull/40) [`3bd0456`](https://github.com/adobe/spectrum-css-workflow-icons/commit/3bd04568aaa769753098acba7aae7dea37586bf3) Thanks [@pfulton](https://github.com/pfulton)! - BREAKING CHANGE: consumes `v3.5.3` (released on Aug 30, 2024) of `@a4u/a4u-s2-icon-global-set-open-source`, bringing this project up-to-date from several previous major version releases which included additions, changes, and removals.
+
+    A detailed changelog for the differences between the previously consumed version (`2.0.0`) and this new version can be found in the [Pull Request](https://github.com/adobe/spectrum-css-workflow-icons/pull/40) details.
+
 ## 3.0.0
 
 ### Major Changes
