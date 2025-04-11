@@ -1,0 +1,6 @@
+import { html } from 'lit';
+
+export const iconChartBarVert = ({ width = 20, height = 20, ariaHidden = true, title = '', id = '-icon', focusable = false } = {}) => {
+  return html`<svg id=${id} width=${width} height=${height} aria-hidden=${ariaHidden ? "true":"false"} role="img" fill="currentColor" aria-label=${title} focusable=${focusable ? "true":"false"} viewBox="0 0 20 20"><path d="M17.25,18H2.75c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h14.5c.41406,0,.75.33594.75.75s-.33594.75-.75.75Z" stroke-width="0"/><path d="M6.75,15c-.41406,0-.75-.33594-.75-.75v-4.25c0-.41406.33594-.75.75-.75s.75.33594.75.75v4.25c0,.41406-.33594.75-.75.75Z" stroke-width="0"/><path d="M3.75,15c-.41406,0-.75-.33594-.75-.75v-2c0-.41406.33594-.75.75-.75s.75.33594.75.75v2c0,.41406-.33594.75-.75.75Z" stroke-width="0"/><path d="M9.75,15c-.41406,0-.75-.33594-.75-.75v-6.75c0-.41406.33594-.75.75-.75s.75.33594.75.75v6.75c0,.41406-.33594.75-.75.75Z" stroke-width="0"/><path d="M12.75,15c-.41406,0-.75-.33594-.75-.75V5c0-.41406.33594-.75.75-.75s.75.33594.75.75v9.25c0,.41406-.33594.75-.75.75Z" stroke-width="0"/><path d="M15.75,15c-.41406,0-.75-.33594-.75-.75V2.75c0-.41406.33594-.75.75-.75s.75.33594.75.75v11.5c0,.41406-.33594.75-.75.75Z" stroke-width="0"/></svg>`;
+};
+export default iconChartBarVert;
