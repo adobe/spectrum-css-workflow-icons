@@ -7,7 +7,6 @@ module.exports = {
     language: 'en-US',
     icons: manifest.svg ?? [],
     webcomponents: manifest.components ?? [],
-    react: manifest.react ?? [],
     spritesheet: 'assets/svg-spriteSheet/icons.svg',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
 };

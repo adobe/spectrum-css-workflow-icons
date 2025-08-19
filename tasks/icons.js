@@ -29,7 +29,7 @@ require('colors');
 async function manifest(
   outputPath = path.join(rootPath, "icons", "manifest.json")
 ) {
-  const files = await fg("{components,react,svg}/*", {
+  const files = await fg("{components,svg}/*", {
     cwd: path.join(rootPath, "icons", "assets"),
     isFile: true,
   });

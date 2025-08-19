@@ -57,10 +57,7 @@ exports.default = async function main({ clean = true, verbose = false } = {}) {
   ]);
 
   return copyFromSource(sourcePath, path.join(rootPath, "dist"), { verbose }).then(() =>
-    Promise.all([
-      index("dist/assets/components/*.js", "dist/assets/components/index.js"),
-      index("dist/assets/react/*.js", "dist/assets/react/index.js"),
-    ]).then(() => {
+    (index("dist/assets/components/*.js", "dist/assets/components/index.js")).then(() => {
       if (verbose) process.stdout.write("✅ Success: ready to publish\n\n");
     })
   );
