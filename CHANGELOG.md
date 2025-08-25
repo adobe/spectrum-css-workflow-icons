@@ -1,5 +1,20 @@
 # @adobe/spectrum-css-workflow-icons
 
+## 5.0.0
+
+### Major Changes
+
+-   [#50](https://github.com/adobe/spectrum-css-workflow-icons/pull/50) [`7eff715`](https://github.com/adobe/spectrum-css-workflow-icons/commit/7eff715a9c3a441a3a7e930fcf8782770e2d296a) Thanks [@pfulton](https://github.com/pfulton)! - feat!: take in 6.0.0 a4u package, drop react icons
+
+    **BREAKING CHANGE:**
+
+    -   Removes React icons from the project
+    -   Takes in the `6.0.0` A4U package which also removes React icons
+
+    Additionally:
+
+    -   Refactors the project code to remove references to React
+
 ## 4.1.0
 
 ### Minor Changes
