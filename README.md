@@ -26,7 +26,7 @@ Run `yarn serve` to see the mini-site for all the workflow icons.
 
 Icons are available from an internal repository that is available only to Adobe employees. If you are an employee with access, follow the steps below:
 
-1. `yarn npm login --scope a4u` to authenticate with the internal repository
+1. `npm login --scope a4u` to authenticate with the internal repository
 2. `yarn add -D @a4u/a4u-s2-icon-global-set-open-source-processed` to install the latest version of the internal repository
 3. **Do not commit** the updated `package.json` with the new version of `@a4u/a4u-s2-icon-global-set-open-source-processed` as this blocks non-Adobe employees from installing and using the repository.
 

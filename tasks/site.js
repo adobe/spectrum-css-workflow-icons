@@ -45,7 +45,7 @@ exports.default = async function main({
       process.stdout.write('🧹 Cleaning site directories...\n\n');
       await rimraf(['dist'], {
         cwd: rootPath,
-        ignore: ['components', 'react', 'svg', 'manifest.json', 'svg-spriteSheet']
+        ignore: ['components', 'svg', 'manifest.json', 'svg-spriteSheet']
       });
     }
 
@@ -62,10 +62,7 @@ exports.default = async function main({
         copyFromSource('sites/', 'dist', { glob: ['*.css'], verbose }),
     ]);
 
-    await Promise.all([
-      index("dist/assets/components/*.js", "dist/assets/components/index.js"),
-      index("dist/assets/react/*.js", "dist/assets/react/index.js"),
-    ]);
+    await index("dist/assets/components/*.js", "dist/assets/components/index.js");
 
     return build({ verbose }).then(() => Promise.all([
     ])).then(() => {
