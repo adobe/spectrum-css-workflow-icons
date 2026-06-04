@@ -1,7 +1,5 @@
 <div align="right">
 
-[![Netlify](https://api.netlify.com/api/v1/badges/22568c1e-135b-4cc4-a682-387cbad68a5d/deploy-status)](https://app.netlify.com/sites/spectrum-workflow-icons/deploys)
-
 ![GitHub Actions build status on main](https://img.shields.io/github/actions/workflow/status/adobe/spectrum-css-workflow-icons/build.yml?branch=main&style=for-the-badge&label=main)
 
 </div>
